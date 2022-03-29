@@ -1,32 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/Product.model';
 import { PRODUCTS } from '../utils/db/products';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService {
-  allProducts: Product[];
-
+export class ProductService extends BaseService<Product> {
   constructor() {
-    this.allProducts = Object.keys(PRODUCTS).map((productKey) =>
-      this.wrapItem({ key: productKey, ...PRODUCTS[productKey] })
-    );
+    super(PRODUCTS, (obj: any) => new Product(obj));
   }
 
-  wrapItem = (obj: any) => new Product(obj);
+  getProductsByKeys = this.getItemsByKeys;
 
-  getProductsByKeys(keys: string[]) {
-    return keys
-      .map((key) => PRODUCTS[key] && this.wrapItem({ key, ...PRODUCTS[key] }))
-      .filter((product) => !!product);
-  }
+  getProductByKey = this.getItemByKey;
 
-  getProductByKey(key: string) {
-    return this.wrapItem({ key, ...PRODUCTS[key] });
-  }
-
-  getProducts(limit?: number) {
-    return this.allProducts.slice(0, limit);
-  }
+  getProducts = this.getItems;
 }

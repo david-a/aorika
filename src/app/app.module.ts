@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CatalogPageComponent } from './components/catalog-page/catalog-page.component';
+import { WorkshopCardComponent } from './components/workshop-card/workshop-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CatalogPageComponent } from './components/catalog-page/catalog-page.com
     HeaderComponent,
     HomePageComponent,
     ProductCardComponent,
-    CatalogPageComponent
+    CatalogPageComponent,
+    WorkshopCardComponent
   ],
   imports: [
     BrowserModule,

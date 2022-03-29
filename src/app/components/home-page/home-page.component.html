@@ -1,10 +1,10 @@
 <div
-  data-poster-url="assets/images/aorika-background-poster"
+  data-poster-url="assets/media/aorika-background-poster"
   class="background-video dark-theme"
 >
   <video autoplay="autoplay" loop="loop">
-    <source src="assets/videos/aorika-background-1080-10fps.mp4" />
-    <source src="assets/videos/aorika-background-1080-10fps.webm" />
+    <source src="assets/media/videos/aorika-background-1080-10fps.mp4" />
+    <source src="assets/media/videos/aorika-background-1080-10fps.webm" />
   </video>
   <div class="hero-container flex-centered">
     <h1 class="hero-heading bold">אאוריקה</h1>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="column">
-      <img src="assets/images/aori-what-bw.jpg" loading="lazy" alt="" />
+      <img src="assets/media/aori-what-bw.jpg" loading="lazy" alt="" />
     </div>
   </div>
 </div>
@@ -47,6 +47,24 @@
   </div>
   <div class="button-holder flex-centered">
     <button routerLink="/catalog">לקטלוג המלא</button>
+  </div>
+</div>
+
+<div class="section green-section" id="galley">
+  <div class="content-wrapper narrower">
+    <h2 class="semi-bold">הגלריה</h2>
+    <h4 class="handwriting margin-bottom">
+      רוצים לראות את הקסם מקרוב? הנה הצצה לכמה מהסדנאות שערכנו.
+    </h4>
+    <div class="gallery-wrapper sample-images">
+      <app-workshop-card
+        *ngFor="let workshop of sampleWorkshops"
+        [workshop]="workshop"
+      ></app-workshop-card>
+    </div>
+  </div>
+  <div class="button-holder flex-centered">
+    <button class="secondary" routerLink="/catalog">לקטלוג המלא</button>
   </div>
 </div>
 

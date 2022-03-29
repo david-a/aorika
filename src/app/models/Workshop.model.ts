@@ -1,20 +1,20 @@
 import { Base } from './Base';
 
-export class Product extends Base {
+export class Workshop extends Base {
   key!: string;
   id!: string;
-  name!: string;
-  price!: number;
+  date!: string;
   description?: string;
+  products?: string[];
   coverImage?: string;
   media!: string[];
 
   get allMediaUrls() {
-    return this.media.map((img) => `assets/media/products/${this.key}/${img}`);
+    return this.media.map((img) => `assets/media/workshops/${this.key}/${img}`);
   }
 
   get coverImageUrl() {
-    return `assets/media/products/${this.key}/${
+    return `assets/media/workshops/${this.key}/${
       this.coverImage || this.media[0]
     }`;
   }

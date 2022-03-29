@@ -186,4 +186,18 @@ button {
   &:active {
     background-color: darken(v.$or-green, 25%);
   }
+
+  &.secondary {
+    background-color: v.$or-white;
+    color: v.$or-green;
+
+    &:hover,
+    &:focus {
+      background-color: darken(v.$or-white, 5%);
+    }
+
+    &:active {
+      background-color: darken(v.$or-white, 10%);
+    }
+  }
 }

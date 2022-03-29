@@ -6,7 +6,7 @@ export const PRODUCTS: Indexable = {
     price: 750,
     description: 'ספסל',
     coverImage: 'fanan.jpg',
-    images: ['fanan.jpg'],
+    media: ['fanan.jpg'],
   },
 
   kabaryolet: {
@@ -14,7 +14,7 @@ export const PRODUCTS: Indexable = {
     price: 550,
     description: 'ארגז על גלגלים עם מכסה מרופד',
     coverImage: 'kabaryolet.jpg',
-    images: ['kabaryolet.jpg'],
+    media: ['kabaryolet.jpg'],
   },
 
   kabuk: {
@@ -22,7 +22,7 @@ export const PRODUCTS: Indexable = {
     price: 750,
     description: 'מעמד כפול לספרים',
     coverImage: 'kabuk.jpg',
-    images: ['kabuk.jpg'],
+    media: ['kabuk.jpg'],
   },
 
   layback: {
@@ -30,7 +30,7 @@ export const PRODUCTS: Indexable = {
     price: 750,
     description: 'ספסל גינה עם משענת',
     coverImage: 'layback.jpg',
-    images: ['layback.jpg'],
+    media: ['layback.jpg'],
   },
 
   maamool: {
@@ -38,7 +38,7 @@ export const PRODUCTS: Indexable = {
     price: 450,
     description: 'מדף כוורת עם מתלים',
     coverImage: 'maamool.jpg',
-    images: ['maamool.jpg'],
+    media: ['maamool.jpg'],
   },
 
   sahbak: {
@@ -46,7 +46,7 @@ export const PRODUCTS: Indexable = {
     price: 350,
     description: 'שידת לילה עם מגירה',
     coverImage: 'sahbak.jpg',
-    images: ['sahbak.jpg'],
+    media: ['sahbak.jpg'],
   },
 
   shaiba: {
@@ -54,7 +54,7 @@ export const PRODUCTS: Indexable = {
     price: 180,
     description: 'שרפרפון',
     coverImage: 'shaiba.jpg',
-    images: ['shaiba.jpg'],
+    media: ['shaiba.jpg'],
   },
 
   sidekick: {
@@ -62,7 +62,7 @@ export const PRODUCTS: Indexable = {
     price: 450,
     description: 'שולחן קפה מתהפך',
     coverImage: 'sidekick.jpg',
-    images: ['sidekick.jpg'],
+    media: ['sidekick.jpg'],
   },
 
   single: {
@@ -70,7 +70,7 @@ export const PRODUCTS: Indexable = {
     price: 250,
     description: 'מדף בודד עם מתלים',
     coverImage: 'single.jpg',
-    images: ['single.jpg'],
+    media: ['single.jpg'],
   },
 
   spicy: {
@@ -78,7 +78,7 @@ export const PRODUCTS: Indexable = {
     price: 450,
     description: 'מדף תבלינים',
     coverImage: 'spicy.jpg',
-    images: ['spicy.jpg'],
+    media: ['spicy.jpg'],
   },
 
   tutim: {
@@ -86,7 +86,7 @@ export const PRODUCTS: Indexable = {
     price: 350,
     description: 'אדנית 60X20',
     coverImage: 'tutim.jpg',
-    images: ['tutim.jpg'],
+    media: ['tutim.jpg'],
   },
 
   trifonas: {
@@ -94,7 +94,7 @@ export const PRODUCTS: Indexable = {
     price: 350,
     description: 'שלישיית מדפים מדורגת',
     coverImage: 'trifonas.jpg',
-    images: ['trifonas.jpg'],
+    media: ['trifonas.jpg'],
   },
 
   umami: {
@@ -102,6 +102,6 @@ export const PRODUCTS: Indexable = {
     price: 450,
     description: 'יחידת מדפים עם מתלים',
     coverImage: 'umami.jpg',
-    images: ['umami.jpg'],
+    media: ['umami.jpg'],
   },
 };
