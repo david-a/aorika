@@ -1,0 +1,26 @@
+@use "variables" as v;
+
+.workshop-card {
+  width: 200px;
+  background-color: v.$or-white;
+
+  .workshop-image {
+    height: 150px;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .workshop-details {
+    height: 100px;
+    width: 100%;
+
+    .card-description {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
