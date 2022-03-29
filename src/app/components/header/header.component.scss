@@ -12,6 +12,10 @@
     display: flex;
     justify-content: space-between;
 
+    .aorika-logo {
+      transition: height 0.3s;
+    }
+
     .nav-menu {
       flex: 1;
 

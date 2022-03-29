@@ -1,0 +1,51 @@
+<div
+  data-poster-url="assets/images/aorika-background-poster"
+  class="background-video dark-theme"
+>
+  <video autoplay="autoplay" loop="loop">
+    <source src="assets/videos/aorika-background-1080-10fps.mp4" />
+    <source src="assets/videos/aorika-background-1080-10fps.webm" />
+  </video>
+  <div class="hero-container flex-centered">
+    <h1 class="hero-heading bold">אאוריקה</h1>
+    <h2 class="hero-heading-2 regular">סדנאות יצירה בעץ</h2>
+  </div>
+</div>
+
+<div class="section green-section" id="about-section">
+  <div class="narrower content-wrapper-columns">
+    <div class="column column-with-text dark-theme">
+      <div class="sub-column-narrower">
+        <h2 class="centered-text semi-bold green margin-bottom-small">
+          אאורי-מה?!
+        </h2>
+        <p>
+          היי, זאת אני - אור מאֵ<strong class="semi-bold">אוֹרִ</strong>יקָה
+          ואני מזמינה אתכם אליי לכמה שעות של יצירה, זמן איכות ולמידה עם המסור,
+          המקדחה וקפה טוב :)<br />מחכה לכם!
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <img src="assets/images/aori-what-bw.jpg" loading="lazy" alt="" />
+    </div>
+  </div>
+</div>
+
+<div class="section" id="catalog-section">
+  <div class="content-wrapper narrower">
+    <h2 class="semi-bold">הקטלוג שלנו</h2>
+    <h4 class="handwriting margin-bottom">
+      הנה כמה דוגמאות למוצרים שתוכלו לבנות אצלנו.
+    </h4>
+    <div class="catalog-wrapper sample-products">
+      <app-product-card
+        *ngFor="let product of sampleProducts"
+        [product]="product"
+      ></app-product-card>
+    </div>
+  </div>
+  <div class="button-holder flex-centered">
+    <button>לקטלוג המלא</button>
+  </div>
+</div>

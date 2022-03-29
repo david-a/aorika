@@ -1,0 +1,34 @@
+@use "variables" as v;
+
+:host:nth-child(even) .product-card {
+  direction: rtl;
+}
+
+.product-card {
+  direction: ltr;
+  height: 300px;
+  background-color: #e7f5f3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  @include v.xs-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .product-details {
+    direction: rtl;
+    padding: 10px 20px;
+  }
+
+  .product-image {
+    height: inherit;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

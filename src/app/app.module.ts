@@ -4,11 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { CatalogPageComponent } from './components/catalog-page/catalog-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomePageComponent,
+    ProductCardComponent,
+    CatalogPageComponent
   ],
   imports: [
     BrowserModule,

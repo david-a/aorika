@@ -1,0 +1,62 @@
+@use "variables" as v;
+
+.background-video {
+  height: 90vh;
+
+  @include v.xs-screen {
+    height: 34vh;
+  }
+
+  video {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -100;
+  }
+
+  .hero-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    height: inherit;
+
+    .hero-heading {
+      font-size: 115px;
+
+      @include v.xs-screen {
+        font-size: 63px;
+      }
+    }
+
+    .hero-heading-2 {
+      font-size: 52px;
+
+      @include v.xs-screen {
+        font-size: 29px;
+      }
+    }
+  }
+}
+
+#about-section {
+  .content-wrapper-columns {
+    gap: 10px;
+  }
+
+  .column,
+  img {
+    height: 400px;
+    width: 100%;
+
+    @include v.xs-screen {
+      height: 200px;
+    }
+  }
+  img {
+    object-fit: cover;
+  }
+}

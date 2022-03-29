@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   defaultHeight = 70;
   scrolledHeight = 50;
   height!: string;
+  logoHeight!: string;
   constructor() {}
 
   ngOnInit() {
@@ -26,8 +27,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
       document.documentElement.scrollTop > this.defaultHeight
     ) {
       this.height = `${this.scrolledHeight}px`;
+      this.logoHeight = `${this.scrolledHeight - 10}px`;
     } else {
       this.height = `${this.defaultHeight}px`;
+      this.logoHeight = `${this.defaultHeight - 10}px`;
     }
   };
 }

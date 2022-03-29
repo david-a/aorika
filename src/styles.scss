@@ -1,14 +1,185 @@
 /* You can add global styles to this file, and also import other style files */
 
 @use "variables" as v;
+@use "fonts" as f;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap");
+@include f.font-geveret-levin;
 
 body {
   direction: v.$app-direction;
+}
+
+// TEXT RULES
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span,
+div,
+li,
+button {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: v.$fg-color;
   margin: 0;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme p,
+.dark-theme a,
+.dark-theme span,
+.dark-theme div,
+.dark-theme li {
+  color: v.$bg-color;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 50px;
+
+  @include v.xs-screen {
+    font-size: 25px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 33px;
+}
+
+h4.handwriting {
+  font-size: 24px;
+
+  @include v.xs-screen {
+    font-size: 19px;
+  }
+}
+
+p {
+  font-size: 31px;
+
+  @include v.xs-screen {
+    font-size: 19px;
+  }
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.smaller {
+  font-size: 0.9em;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.green {
+  color: v.$or-green !important;
+}
+
+.handwriting {
+  font-family: "geveretLevin", sans-serif;
+}
+
+// LAYOUT RULES
+
+.margin-bottom-small {
+  margin-bottom: 10px;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
 }
 
 .flex-centered {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section {
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.content-wrapper-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include v.xs-screen {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column {
+  box-sizing: border-box;
+}
+
+.column.column-with-text {
+  padding: 20px;
+  background-color: rgba(22, 22, 22, 0.7);
+}
+
+.green-section {
+  background-color: v.$or-green;
+}
+
+.narrower {
+  width: v.$content-width;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+// Common Elements
+
+button {
+  padding: 10px 20px;
+  font-size: 35px;
+  background-color: v.$or-green;
+  color: v.$or-white;
+  border: none;
+  font-weight: 400;
+
+  &:hover,
+  &:focus {
+    background-color: darken(v.$or-green, 15%);
+  }
+
+  &:active {
+    background-color: darken(v.$or-green, 25%);
+  }
 }
