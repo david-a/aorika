@@ -1,16 +1,18 @@
 <div class="navbar flex-centered dark-theme" [style.height]="height">
   <div class="nav-container">
-    <img
-      class="aorika-logo"
-      [style.height]="logoHeight"
-      src="/assets/images/aorika-logo-89ccc5.svg"
-      loading="lazy"
-      width="99"
-      alt=""
-    />
+    <a routerLink="/">
+      <img
+        class="aorika-logo"
+        [style.height]="logoHeight"
+        src="/assets/images/aorika-logo-89ccc5.svg"
+        loading="lazy"
+        width="99"
+        alt=""
+      />
+    </a>
     <nav role="navigation" class="nav-menu flex-centered">
-      <a href="#" class="nav-link">הקטלוג</a
-      ><a href="#" class="nav-link">גלריה</a>
+      <a routerLink="/catalog" class="nav-link">הקטלוג</a
+      ><a href="/gallery" class="nav-link">גלריה</a>
     </nav>
   </div>
 </div>

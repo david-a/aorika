@@ -121,6 +121,10 @@ p {
   align-items: center;
 }
 
+.lower-than-header {
+  margin-top: v.$header-height;
+}
+
 .section {
   overflow: hidden;
   margin-right: auto;
