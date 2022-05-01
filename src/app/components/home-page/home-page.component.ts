@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/Product.model';
+import { Workshop } from 'src/app/models/Workshop.model';
 import { ProductService } from 'src/app/services/product.service';
 import { WorkshopService } from 'src/app/services/workshop.service';
 
@@ -8,18 +10,16 @@ import { WorkshopService } from 'src/app/services/workshop.service';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
+  sampleProducts!: Product[];
+  sampleWorkshops!: Workshop[];
+
   constructor(
     private productService: ProductService,
     private workshopService: WorkshopService
   ) {}
 
-  ngOnInit(): void {}
-
-  get sampleProducts() {
-    return this.productService.getProducts(3);
-  }
-
-  get sampleWorkshops() {
-    return this.workshopService.getWorkshops(3);
+  ngOnInit(): void {
+    this.sampleProducts = this.productService.getRandomProducts(3);
+    this.sampleWorkshops = this.workshopService.getRandomWorkshops(3);
   }
 }

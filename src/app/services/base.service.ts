@@ -1,3 +1,5 @@
+import { chooseRandom } from '../utils/arrayUtils';
+
 export abstract class BaseService<T> {
   allItemsObject: { [key: string]: T };
   wrapItem!: (obj: T) => T;
@@ -27,5 +29,9 @@ export abstract class BaseService<T> {
 
   getItems(limit?: number) {
     return this.allItems.slice(0, limit);
+  }
+
+  getRandomItems(limit?: number) {
+    return chooseRandom(this.allItems, limit);
   }
 }

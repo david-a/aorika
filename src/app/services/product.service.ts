@@ -16,4 +16,6 @@ export class ProductService extends BaseService<Product> {
   getProductByKey = this.getItemByKey;
 
   getProducts = this.getItems;
+
+  getRandomProducts = this.getRandomItems;
 }

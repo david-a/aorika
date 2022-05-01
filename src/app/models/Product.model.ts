@@ -14,7 +14,9 @@ export class Product extends Base {
   }
 
   get allMediaUrls() {
-    return this.media.map((img) => `assets/media/products/${this.key}/${img}`);
+    return this.media.map((img) =>
+      img.startsWith('http') ? img : `assets/media/products/${this.key}/${img}`
+    );
   }
 
   get coverImageUrl() {

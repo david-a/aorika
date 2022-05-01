@@ -168,6 +168,12 @@ p {
   overflow: hidden;
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
 // Common Elements
 
 button {

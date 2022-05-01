@@ -21,7 +21,9 @@ export class Workshop extends Base {
   }
 
   get allMediaUrls() {
-    return this.media.map((img) => `assets/media/workshops/${this.key}/${img}`);
+    return this.media.map((img) =>
+      img.startsWith('http') ? img : `assets/media/workshops/${this.key}/${img}`
+    );
   }
 
   get coverImageUrl() {

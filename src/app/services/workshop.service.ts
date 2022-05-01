@@ -16,4 +16,6 @@ export class WorkshopService extends BaseService<Workshop> {
   getWorkshopByKey = this.getItemByKey;
 
   getWorkshops = this.getItems;
+
+  getRandomWorkshops = this.getRandomItems;
 }

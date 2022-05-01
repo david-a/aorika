@@ -3,7 +3,10 @@ import {
   OnInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
+  ElementRef,
+  ViewChild,
 } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import {
@@ -28,10 +31,13 @@ export class MediaPlayerComponent implements OnInit {
   dbServices: any;
   overlay?: boolean;
 
+  @ViewChild('mediaPlayerRef') mediaPlayerRef?: ElementRef;
+
   constructor(
     private cdr: ChangeDetectorRef,
     private mediaPlayerService: MediaPlayerService,
-    private router: Router
+    private router: Router,
+    protected _sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -63,7 +69,7 @@ export class MediaPlayerComponent implements OnInit {
     if (this.selected !== url) {
       this.selected = url;
       const allVideos = document.querySelectorAll('.media-player video') as any;
-      window.scrollTo(0, 0);
+      window.scrollTo(this.mediaPlayerRef?.nativeElement.yPosition);
       setTimeout(() => {
         allVideos?.forEach((vid: any) => {
           const selected = vid?.querySelector('*')?.closest('.selected');
@@ -71,6 +77,23 @@ export class MediaPlayerComponent implements OnInit {
         });
       });
     }
+  }
+
+  isExternalVideo(url: string) {
+    return url.startsWith('http');
+  }
+
+  bypassSecurityTrustResourceUrl(url: string) {
+    return this._sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  getExternalVideoThumb(url: string) {
+    const videoId = url.match(/\/embed\/(.*)\/?/);
+    return (
+      videoId &&
+      videoId[1] &&
+      `https://img.youtube.com/vi/${videoId[1]}/mqdefault.jpg`
+    );
   }
 
   shouldBeTall(url: string, index: number) {
