@@ -1,0 +1,43 @@
+<div
+  class="media-player"
+  [class.overlay]="overlay"
+  *ngIf="item && item.media.length"
+  (click)="onClose()"
+>
+  <a class="close-media-player" (click)="onClose()">X</a>
+  <div class="gallery-container" (click)="$event.stopPropagation()">
+    <div class="grid-item item-info">
+      <h2 class="semi-bold">{{ item.name }}</h2>
+      <p class="description">
+        {{ item.description }}
+      </p>
+      <p *ngIf="item.products" class="products">
+        <span class="semi-bold">מוצרים: </span>{{ item.productsInHebrew }}
+      </p>
+    </div>
+    <div
+      *ngFor="let mediaItemUrl of item.allMediaUrls; index as i"
+      class="grid-item"
+      [class.wide]="shouldBeWide(mediaItemUrl, i)"
+      [class.tall]="shouldBeTall(mediaItemUrl, i)"
+      [class.selected]="isSelected(mediaItemUrl)"
+      (click)="onClick(mediaItemUrl, $event)"
+    >
+      <div class="video-container" *ngIf="!isPhoto(mediaItemUrl)">
+        <video
+          id="media-player-video"
+          [controls]="isSelected(mediaItemUrl)"
+          muted
+        >
+          <source src="{{ mediaItemUrl }}" type="video/mp4" />
+        </video>
+        <div *ngIf="!isSelected(mediaItemUrl)" class="video-overlay">►</div>
+      </div>
+      <img
+        *ngIf="isPhoto(mediaItemUrl)"
+        id="media-player-photo"
+        [src]="mediaItemUrl"
+      />
+    </div>
+  </div>
+</div>

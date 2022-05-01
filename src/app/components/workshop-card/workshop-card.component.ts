@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Workshop } from 'src/app/models/Workshop.model';
+import { MediaPlayerService } from 'src/app/services/media-player.service';
 
 @Component({
   selector: 'app-workshop-card',
@@ -8,7 +9,14 @@ import { Workshop } from 'src/app/models/Workshop.model';
 })
 export class WorkshopCardComponent implements OnInit {
   @Input() workshop!: Workshop;
-  constructor() {}
+  constructor(private mediaPlayerService: MediaPlayerService) {}
 
   ngOnInit(): void {}
+
+  onClick() {
+    this.mediaPlayerService.emitMediaPlayerItem({
+      item: this.workshop,
+      overlay: true,
+    });
+  }
 }

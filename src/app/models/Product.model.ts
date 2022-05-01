@@ -9,6 +9,10 @@ export class Product extends Base {
   coverImage?: string;
   media!: string[];
 
+  get type() {
+    return 'product';
+  }
+
   get allMediaUrls() {
     return this.media.map((img) => `assets/media/products/${this.key}/${img}`);
   }

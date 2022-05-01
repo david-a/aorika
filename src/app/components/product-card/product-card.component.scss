@@ -5,14 +5,19 @@
 }
 
 .product-card {
+  cursor: pointer;
   direction: ltr;
   height: 300px;
   background-color: #e7f5f3;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 20px;
-
+  transition: outline 0.2s;
   overflow: hidden;
+
+  &:hover {
+    outline: 3px solid v.$or-black;
+  }
 
   @include v.xs-screen {
     grid-template-columns: 1fr;

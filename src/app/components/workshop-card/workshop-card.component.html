@@ -1,8 +1,11 @@
-<div class="workshop-card">
+<div class="workshop-card" (click)="onClick()">
   <div class="workshop-image">
     <img [src]="workshop.coverImageUrl" />
   </div>
   <div class="workshop-details flex-centered">
     <p class="card-description">{{ workshop.description }}</p>
+    <p class="card-products">
+      <span class="semi-bold">מוצרים: </span>{{ workshop.productsInHebrew }}
+    </p>
   </div>
 </div>

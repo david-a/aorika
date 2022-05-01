@@ -8,6 +8,9 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CatalogPageComponent } from './components/catalog-page/catalog-page.component';
 import { WorkshopCardComponent } from './components/workshop-card/workshop-card.component';
+import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
+import { MediaPlayerComponent } from './components/media-player/media-player.component';
+import { MediaPageComponent } from './components/media-page/media-page.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,13 @@ import { WorkshopCardComponent } from './components/workshop-card/workshop-card.
     HomePageComponent,
     ProductCardComponent,
     CatalogPageComponent,
-    WorkshopCardComponent
+    WorkshopCardComponent,
+    GalleryPageComponent,
+    MediaPlayerComponent,
+    MediaPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
