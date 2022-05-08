@@ -5,7 +5,8 @@
   <div class="workshop-details flex-centered">
     <p class="card-description">{{ workshop.description }}</p>
     <p class="card-products">
-      <span class="semi-bold">מוצרים: </span>{{ workshop.productsInHebrew }}
+      <span class="semi-bold">מוצרים: </span
+      >{{ workshop.productNames.join(", ") }}
     </p>
   </div>
 </div>

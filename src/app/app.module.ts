@@ -11,6 +11,7 @@ import { WorkshopCardComponent } from './components/workshop-card/workshop-card.
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { MediaPlayerComponent } from './components/media-player/media-player.component';
 import { MediaPageComponent } from './components/media-page/media-page.component';
+import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MediaPageComponent } from './components/media-page/media-page.component
     GalleryPageComponent,
     MediaPlayerComponent,
     MediaPageComponent,
+    MinuteSecondsPipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

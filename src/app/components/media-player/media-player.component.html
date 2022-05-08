@@ -2,19 +2,108 @@
   class="media-player"
   [class.overlay]="overlay"
   *ngIf="item && item.media.length"
-  (click)="onClose()"
+  (click)="overlay && onClose()"
   #mediaPlayerRef
 >
   <a class="close-media-player" (click)="onClose()">X</a>
   <div class="gallery-container" (click)="$event.stopPropagation()">
     <div class="grid-item item-info">
       <h2 class="semi-bold">{{ item.name }}</h2>
-      <p class="description">
+      <p class="description margin-bottom">
         {{ item.description }}
       </p>
-      <p *ngIf="item.products" class="products">
-        <span class="semi-bold">מוצרים: </span>{{ item.productsInHebrew }}
+      <p *ngIf="item.products" class="products margin-bottom">
+        <span class="semi-bold">מוצרים: </span>
+        <ng-container *ngFor="let product of item.productNames; index as i">
+          <a *ngIf="item.productLinks[i]" [routerLink]="item.productLinks[i]">{{
+            product
+          }}</a>
+          <span *ngIf="!item.productLinks[i]">{{ product }}</span>
+          <span *ngIf="i < item.productNames.length - 1">, </span>
+        </ng-container>
       </p>
+
+      <p *ngIf="item.duration" class="price margin-bottom">
+        <span class="semi-bold">משך הסדנה: </span>
+        {{ item.duration | minuteSeconds }} שעות
+      </p>
+
+      <p *ngIf="item.price" class="price margin-bottom">
+        <span class="semi-bold">מחיר: </span>
+        {{ item.price }}₪
+      </p>
+
+      <div class="share-buttons">
+        <!-- Twitter (url, text, @mention) -->
+        <a
+          target="_blank"
+          [href]="
+            'https://twitter.com/share?url=' + shareUrl + '&text=' + shareText
+          "
+        >
+          <img
+            class="link-icon margin-forward-small"
+            alt="Share on Twitter"
+            title="Share on Twitter"
+            src="assets/icons/twitter.png"
+          />
+        </a>
+
+        <!-- Facebook (url) -->
+        <a
+          target="_blank"
+          [href]="'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl"
+        >
+          <img
+            class="link-icon margin-forward-small"
+            alt="Share on Facebook"
+            title="Share on Facebook"
+            src="assets/icons/facebook.png"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          [href]="
+            'https://api.whatsapp.com/send?phone=&text=' +
+            shareText +
+            ' %0D%0A%0D%0A' +
+            shareUrl
+          "
+        >
+          <img
+            class="link-icon margin-forward-small"
+            alt="Share on Whatsapp"
+            title="Share on Whatsapp"
+            src="assets/icons/whatsapp.png"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          [href]="
+            'https://t.me/share/url?url=' + shareUrl + '&text=' + shareText
+          "
+        >
+          <img
+            class="link-icon margin-forward-small"
+            alt="Share on Telegram"
+            title="Share on Telegram"
+            src="assets/icons/telegram.png"
+          />
+        </a>
+
+        <a target="_blank" (click)="copyUrl()">
+          <img
+            class="link-icon margin-forward-small"
+            alt="Copy to Clipboard"
+            title="Copy to Clipboard"
+            src="assets/icons/copy.png"
+          />
+        </a>
+
+        <span *ngIf="showClipboardCopied">הקישור הועתק ללוח!</span>
+      </div>
     </div>
     <div
       *ngFor="let mediaItemUrl of item.allMediaUrls; index as i"

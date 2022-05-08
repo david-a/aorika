@@ -73,6 +73,15 @@ export const PRODUCTS: Indexable = {
     media: ['single.jpg'],
   },
 
+  shufuni: {
+    name: 'שׁוּפוּנִי',
+    price: 750,
+    duration: 360,
+    description: 'קונסולת מגירות גבוהה.',
+    coverImage: 'sufuni.cutout.png',
+    media: ['shufuni.jpg'],
+  },
+
   spicy: {
     name: 'סְפָּיְיסִי',
     price: 450,

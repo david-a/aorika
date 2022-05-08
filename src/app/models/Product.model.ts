@@ -5,6 +5,7 @@ export class Product extends Base {
   id!: string;
   name!: string;
   price!: number;
+  duration?: number; // in minutes
   description?: string;
   coverImage?: string;
   media!: string[];

@@ -77,6 +77,27 @@ p {
   }
 }
 
+a {
+  text-decoration: none;
+  color: v.$or-green;
+  transition: color 0.4s text-decoration 0.4s;
+}
+
+a:hover:not(.disabled) {
+  text-decoration: underline;
+  color: darken(v.$or-green, 20%);
+  cursor: pointer;
+}
+
+a:active:not(.disabled) {
+  text-decoration: underline;
+  color: darken(v.$or-green, 40%);
+}
+
+img.link-icon {
+  width: 2em !important;
+}
+
 .regular {
   font-weight: 400;
 }
@@ -113,6 +134,10 @@ p {
 
 .margin-bottom {
   margin-bottom: 20px;
+}
+
+.margin-forward-small {
+  margin-left: 10px;
 }
 
 .flex-centered {

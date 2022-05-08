@@ -10,8 +10,8 @@ export const WORKSHOPS: Indexable = {
   },
   '20220422_001': {
     date: '2022-04-22',
-    description: 'רעות ומתי',
-    products: ['שׁוּפוּנִי'],
+    description: 'השופוני של רעות ומתי',
+    products: ['shufuni'],
     coverImage: 'IMG_0111.JPG',
     media: [
       'https://www.youtube.com/embed/dLtOpryjuo4',

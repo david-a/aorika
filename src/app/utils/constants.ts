@@ -12,3 +12,5 @@ export const SUPPORTED_PHOTO_FILETYPES = [
   'avif',
   'apng',
 ];
+
+export const BASE_URL = 'https://www.aorika.com';

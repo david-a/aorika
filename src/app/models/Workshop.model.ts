@@ -14,10 +14,14 @@ export class Workshop extends Base {
     return 'workshop';
   }
 
-  get productsInHebrew() {
-    return this.products
-      ?.map((product) => PRODUCTS[product]?.name || product)
-      .join(', ');
+  get productNames() {
+    return this.products?.map((product) => PRODUCTS[product]?.name || product);
+  }
+
+  get productLinks() {
+    return this.products?.map((product) =>
+      PRODUCTS[product] ? '/product/' + product : undefined
+    );
   }
 
   get allMediaUrls() {

@@ -13,8 +13,9 @@ import {
   MediaPlayerItem,
   MediaPlayerService,
 } from 'src/app/services/media-player.service';
+import { BASE_URL } from 'src/app/utils/constants';
 
-import { isPhoto } from 'src/app/utils/stringUtils';
+import { copyMessage, isPhoto } from 'src/app/utils/stringUtils';
 
 @Component({
   selector: 'app-media-player',
@@ -30,6 +31,7 @@ export class MediaPlayerComponent implements OnInit {
   isPhoto = isPhoto;
   dbServices: any;
   overlay?: boolean;
+  showClipboardCopied = false;
 
   @ViewChild('mediaPlayerRef') mediaPlayerRef?: ElementRef;
 
@@ -46,7 +48,11 @@ export class MediaPlayerComponent implements OnInit {
         this.item = event?.item;
         this.overlay = event?.overlay;
         this.seed = Math.random();
-        this.selected = this.item?.coverImageUrl;
+        this.selected = this.item?.allMediaUrls.includes(
+          this.item?.coverImageUrl
+        )
+          ? this.item?.coverImageUrl
+          : this.item?.allMediaUrls[0];
         this.item &&
           (document.getElementById('main-background-video') as any)?.pause();
         this.cdr.markForCheck();
@@ -113,5 +119,25 @@ export class MediaPlayerComponent implements OnInit {
 
   isSelected(url: string) {
     return url === this.selected;
+  }
+
+  get shareUrl() {
+    return this.item && BASE_URL + `/${this.item.type}/${this.item.key}`;
+  }
+
+  get shareText() {
+    return this.item?.type === 'product'
+      ? 'מצאתי מוצר מדליק באאוריקה'
+      : 'הנה כמה תמונות מדליקות מהסדנה באאוריקה';
+  }
+
+  copyUrl() {
+    if (this.shareUrl && copyMessage(this.shareUrl)) {
+      this.showClipboardCopied = true;
+      setTimeout(() => {
+        this.showClipboardCopied = false;
+        this.cdr.markForCheck();
+      }, 5000);
+    }
   }
 }

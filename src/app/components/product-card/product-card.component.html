@@ -4,6 +4,14 @@
   </div>
   <div class="product-details">
     <h2>{{ product.name }}</h2>
-    <p>{{ product.description }}</p>
+    <p class="margin-bottom">{{ product.description }}</p>
+    <p *ngIf="product?.duration" class="price margin-bottom">
+      <span class="semi-bold">משך הסדנה: </span>
+      {{ product?.duration | minuteSeconds }} שעות
+    </p>
+    <p *ngIf="product?.price" class="price margin-bottom">
+      <span class="semi-bold">מחיר: </span>
+      {{ product?.price }}₪
+    </p>
   </div>
 </div>
