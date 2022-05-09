@@ -7,7 +7,7 @@
     <p class="margin-bottom">{{ product.description }}</p>
     <p *ngIf="product?.duration" class="price margin-bottom">
       <span class="semi-bold">משך הסדנה: </span>
-      {{ product?.duration | minuteSeconds }} שעות
+      {{ product.duration | minuteSeconds }} שעות
     </p>
     <p *ngIf="product?.price" class="price margin-bottom">
       <span class="semi-bold">מחיר: </span>
