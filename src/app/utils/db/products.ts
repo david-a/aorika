@@ -9,6 +9,7 @@ export const PRODUCTS: Indexable = {
     media: ['fanan.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -20,6 +21,7 @@ export const PRODUCTS: Indexable = {
     media: ['kabaryolet.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -31,6 +33,7 @@ export const PRODUCTS: Indexable = {
     media: ['kabuk.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -42,6 +45,7 @@ export const PRODUCTS: Indexable = {
     media: ['layback.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -53,6 +57,7 @@ export const PRODUCTS: Indexable = {
     media: ['maamool.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -64,6 +69,7 @@ export const PRODUCTS: Indexable = {
     media: ['sahbak.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -74,7 +80,7 @@ export const PRODUCTS: Indexable = {
     coverImage: 'shaiba.cutout.png',
     media: ['shaiba.jpg'],
     tags: {
-      catalog: false,
+      catalog: true,
     },
   },
 
@@ -86,6 +92,7 @@ export const PRODUCTS: Indexable = {
     media: ['sidekick.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -109,6 +116,7 @@ export const PRODUCTS: Indexable = {
     media: ['shufuni.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 
@@ -153,6 +161,7 @@ export const PRODUCTS: Indexable = {
     media: ['umami.jpg'],
     tags: {
       catalog: true,
+      homepage: true,
     },
   },
 };

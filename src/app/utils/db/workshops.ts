@@ -9,6 +9,7 @@ export const WORKSHOPS: Indexable = {
     media: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
     tags: {
       gallery: true,
+      homepage: true,
     },
   },
   '20220422_001': {
@@ -32,6 +33,7 @@ export const WORKSHOPS: Indexable = {
     ],
     tags: {
       gallery: true,
+      homepage: true,
     },
   },
 };

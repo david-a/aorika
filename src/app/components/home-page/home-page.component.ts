@@ -19,9 +19,13 @@ export class HomePageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.sampleProducts = this.productService.getRandomProducts(3, ['catalog']);
+    this.sampleProducts = this.productService.getRandomProducts(3, [
+      'catalog',
+      'homepage',
+    ]);
     this.sampleWorkshops = this.workshopService.getRandomWorkshops(3, [
       'gallery',
+      'homepage',
     ]);
   }
 }
