@@ -7,7 +7,7 @@ export const PRODUCTS: Indexable = {
     description: 'ספסל',
     coverImage: 'fanan.jpg',
     media: ['fanan.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -18,7 +18,7 @@ export const PRODUCTS: Indexable = {
     description: 'ארגז על גלגלים עם מכסה מרופד',
     coverImage: 'kabaryolet.jpg',
     media: ['kabaryolet.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -29,7 +29,7 @@ export const PRODUCTS: Indexable = {
     description: 'מעמד כפול לספרים',
     coverImage: 'kabuk.jpg',
     media: ['kabuk.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -40,7 +40,7 @@ export const PRODUCTS: Indexable = {
     description: 'ספסל גינה עם משענת',
     coverImage: 'layback.cutout.png',
     media: ['layback.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -51,7 +51,7 @@ export const PRODUCTS: Indexable = {
     description: 'מדף כוורת עם מתלים',
     coverImage: 'maamool.cutout.png',
     media: ['maamool.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -62,7 +62,7 @@ export const PRODUCTS: Indexable = {
     description: 'שידת לילה עם מגירה',
     coverImage: 'sahbak.cutout.png',
     media: ['sahbak.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -73,7 +73,7 @@ export const PRODUCTS: Indexable = {
     description: 'שרפרפון',
     coverImage: 'shaiba.cutout.png',
     media: ['shaiba.jpg'],
-    visibility: {
+    tags: {
       catalog: false,
     },
   },
@@ -84,7 +84,7 @@ export const PRODUCTS: Indexable = {
     description: 'שולחן קפה מתהפך',
     coverImage: 'sidekick.cutout.png',
     media: ['sidekick.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -95,7 +95,7 @@ export const PRODUCTS: Indexable = {
     description: 'מדף בודד עם מתלים',
     coverImage: 'single.cutout.png',
     media: ['single.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -107,7 +107,7 @@ export const PRODUCTS: Indexable = {
     description: 'קונסולת מגירות גבוהה.',
     coverImage: 'sufuni.cutout.png',
     media: ['shufuni.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -118,7 +118,7 @@ export const PRODUCTS: Indexable = {
     description: 'מדף תבלינים',
     coverImage: 'spicy.jpg',
     media: ['spicy.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -129,7 +129,7 @@ export const PRODUCTS: Indexable = {
     description: 'אדנית 60X20',
     coverImage: 'tutim.cutout.png',
     media: ['tutim.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -140,7 +140,7 @@ export const PRODUCTS: Indexable = {
     description: 'שלישיית מדפים מדורגת',
     coverImage: 'trifonas.cutout.png',
     media: ['trifonas.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },
@@ -151,7 +151,7 @@ export const PRODUCTS: Indexable = {
     description: 'יחידת מדפים עם מתלים',
     coverImage: 'umami.jpg',
     media: ['umami.jpg'],
-    visibility: {
+    tags: {
       catalog: true,
     },
   },

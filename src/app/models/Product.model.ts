@@ -12,7 +12,7 @@ export class Product extends Base {
   description?: string;
   coverImage?: string;
   media!: string[];
-  visibility?: Indexable;
+  tags?: Indexable;
 
   get type() {
     return 'product';

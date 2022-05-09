@@ -12,7 +12,7 @@ export class Workshop extends Base {
   products?: string[];
   coverImage?: string;
   media!: string[];
-  visibility?: Indexable;
+  tags?: Indexable;
 
   get type() {
     return 'workshop';

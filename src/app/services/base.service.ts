@@ -28,20 +28,21 @@ export abstract class BaseService<T> {
     return this.wrapItem({ key, ...this.allItemsObject[key] });
   }
 
-  itemsWithVisibility(visibility?: string) {
-    return visibility
+  itemsWithTags(tags?: string[]) {
+    return tags && tags.length
       ? this.allItems.filter(
           (item) =>
-            (item as any).visibility && (item as any).visibility[visibility]
+            (item as any).tags &&
+            tags.filter((tag) => (item as any).tags[tag]).length === tags.length
         )
       : this.allItems;
   }
 
-  getItems(limit?: number, visibility?: string) {
-    return this.itemsWithVisibility(visibility).slice(0, limit);
+  getItems(limit?: number, tags?: string[]) {
+    return this.itemsWithTags(tags).slice(0, limit);
   }
 
-  getRandomItems(limit?: number, visibility?: string) {
-    return chooseRandom(this.itemsWithVisibility(visibility), limit);
+  getRandomItems(limit?: number, tags?: string[]) {
+    return chooseRandom(this.itemsWithTags(tags), limit);
   }
 }

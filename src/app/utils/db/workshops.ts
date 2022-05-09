@@ -7,7 +7,7 @@ export const WORKSHOPS: Indexable = {
     products: ['kabaryolet'],
     coverImage: '5.jpg',
     media: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
-    visibility: {
+    tags: {
       gallery: true,
     },
   },
@@ -30,7 +30,7 @@ export const WORKSHOPS: Indexable = {
       'IMG_0134.JPG',
       'IMG_9978.JPG',
     ],
-    visibility: {
+    tags: {
       gallery: true,
     },
   },
