@@ -1,4 +1,6 @@
+import { assetUrl } from '../pipes/Asset.pipe';
 import { PRODUCTS } from '../utils/db/products';
+import { isPhoto } from '../utils/stringUtils';
 import { Base } from './Base';
 
 export class Workshop extends Base {
@@ -25,14 +27,19 @@ export class Workshop extends Base {
   }
 
   get allMediaUrls() {
-    return this.media.map((img) =>
-      img.startsWith('http') ? img : `assets/media/workshops/${this.key}/${img}`
+    return this.media.map((filename) =>
+      filename.startsWith('http')
+        ? filename
+        : assetUrl(
+            `workshops/${this.key}/${filename}`,
+            isPhoto(filename) ? 'image' : 'video'
+          )
     );
   }
 
   get coverImageUrl() {
-    return `assets/media/workshops/${this.key}/${
-      this.coverImage || this.media[0]
-    }`;
+    return assetUrl(
+      `workshops/${this.key}/${this.coverImage || this.media[0]}`
+    );
   }
 }

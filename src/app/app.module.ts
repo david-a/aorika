@@ -12,6 +12,7 @@ import { GalleryPageComponent } from './components/gallery-page/gallery-page.com
 import { MediaPlayerComponent } from './components/media-player/media-player.component';
 import { MediaPageComponent } from './components/media-page/media-page.component';
 import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
+import { AssetPipe } from './pipes/Asset.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
     MediaPlayerComponent,
     MediaPageComponent,
     MinuteSecondsPipe,
+    AssetPipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

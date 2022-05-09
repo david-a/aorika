@@ -1,10 +1,14 @@
 <div
-  data-poster-url="assets/media/aorika-background-poster"
+  data-poster-url="{{ 'aorika-background-poster' | asset }}"
   class="background-video dark-theme"
 >
   <video id="main-background-video" autoplay="autoplay" loop="loop">
-    <source src="assets/media/videos/aorika-background-1080-10fps.mp4" />
-    <source src="assets/media/videos/aorika-background-1080-10fps.webm" />
+    <source
+      [src]="'videos/aorika-background-1080-10fps-mp4.mp4' | asset: 'video'"
+    />
+    <source
+      [src]="'videos/aorika-background-1080-10fps.webm' | asset: 'video'"
+    />
   </video>
   <div class="hero-container flex-centered">
     <h1 class="hero-heading bold">אאוריקה</h1>
@@ -27,7 +31,7 @@
       </div>
     </div>
     <div class="column">
-      <img src="assets/media/aori-what-bw.jpg" loading="lazy" alt="" />
+      <img [src]="'aori-what-bw.jpg' | asset" loading="lazy" alt="" />
     </div>
   </div>
 </div>

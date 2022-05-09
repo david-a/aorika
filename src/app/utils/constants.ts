@@ -14,3 +14,10 @@ export const SUPPORTED_PHOTO_FILETYPES = [
 ];
 
 export const BASE_URL = 'https://www.aorika.com';
+
+export const BASE_ASSETS_URL = {
+  image: 'https://res.cloudinary.com/d3d/image/upload/Aorika/media/',
+  video: 'https://res.cloudinary.com/d3d/video/upload/Aorika/media/',
+  icon: 'https://res.cloudinary.com/d3d/image/upload/Aorika/icons/',
+  font: 'https://res.cloudinary.com/d3d/raw/upload/Aorika/fonts/',
+};

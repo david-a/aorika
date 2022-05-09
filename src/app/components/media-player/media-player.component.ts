@@ -46,6 +46,7 @@ export class MediaPlayerComponent implements OnInit {
     this.subscriptions.mediaPlayerService =
       this.mediaPlayerService.mediaPlayerItem$.subscribe((event) => {
         this.item = event?.item;
+        this.showClipboardCopied = false;
         this.overlay = event?.overlay;
         this.seed = Math.random();
         this.selected = this.item?.allMediaUrls.includes(
