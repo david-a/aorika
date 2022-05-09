@@ -1,3 +1,4 @@
+import { BaseItem } from '../types/BaseItem';
 import { chooseRandom } from '../utils/arrayUtils';
 
 export abstract class BaseService<T> {
@@ -27,11 +28,20 @@ export abstract class BaseService<T> {
     return this.wrapItem({ key, ...this.allItemsObject[key] });
   }
 
-  getItems(limit?: number) {
-    return this.allItems.slice(0, limit);
+  itemsWithVisibility(visibility?: string) {
+    return visibility
+      ? this.allItems.filter(
+          (item) =>
+            (item as any).visibility && (item as any).visibility[visibility]
+        )
+      : this.allItems;
   }
 
-  getRandomItems(limit?: number) {
-    return chooseRandom(this.allItems, limit);
+  getItems(limit?: number, visibility?: string) {
+    return this.itemsWithVisibility(visibility).slice(0, limit);
+  }
+
+  getRandomItems(limit?: number, visibility?: string) {
+    return chooseRandom(this.itemsWithVisibility(visibility), limit);
   }
 }

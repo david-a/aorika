@@ -1,3 +1,4 @@
+import { Indexable } from '../interfaces/Indexable';
 import { assetUrl } from '../pipes/Asset.pipe';
 import { PRODUCTS } from '../utils/db/products';
 import { isPhoto } from '../utils/stringUtils';
@@ -11,6 +12,7 @@ export class Workshop extends Base {
   products?: string[];
   coverImage?: string;
   media!: string[];
+  visibility?: Indexable;
 
   get type() {
     return 'workshop';
@@ -39,7 +41,9 @@ export class Workshop extends Base {
 
   get coverImageUrl() {
     return assetUrl(
-      `workshops/${this.key}/${this.coverImage || this.media[0]}`
+      `workshops/${this.key}/${this.coverImage || this.media[0]}`,
+      'image',
+      300
     );
   }
 }

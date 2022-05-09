@@ -12,6 +12,6 @@ export class GalleryPageComponent implements OnInit {
   ngOnInit(): void {}
 
   get workshops() {
-    return this.workshopService.getWorkshops();
+    return this.workshopService.getWorkshops(undefined, 'gallery');
   }
 }

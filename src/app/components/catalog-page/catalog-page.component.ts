@@ -12,6 +12,6 @@ export class CatalogPageComponent implements OnInit {
   ngOnInit(): void {}
 
   get products() {
-    return this.productService.getProducts();
+    return this.productService.getProducts(undefined, 'catalog');
   }
 }
