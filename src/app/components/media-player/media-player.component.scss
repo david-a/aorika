@@ -83,6 +83,7 @@
     overflow-y: auto;
 
     @include v.xs-screen {
+      overflow-y: initial;
       grid-column: auto;
       grid-row: auto;
     }
