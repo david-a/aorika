@@ -42,8 +42,8 @@
   }
 }
 
-#about-section,
-#contact-section {
+#about,
+#contact {
   .content-wrapper-columns {
     gap: 10px;
   }
@@ -89,8 +89,8 @@
   }
 }
 
-#about-section .content-wrapper-columns,
-#about-section img {
+#about .content-wrapper-columns,
+#about img {
   height: 400px;
 }
 

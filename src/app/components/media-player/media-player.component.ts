@@ -14,6 +14,11 @@ import {
   MediaPlayerService,
 } from 'src/app/services/media-player.service';
 import { BASE_URL } from 'src/app/utils/constants';
+import {
+  elementInViewport,
+  navigateNonSmooth,
+  navigateToContactFormAndMessage,
+} from 'src/app/utils/domUtils';
 
 import { copyMessage, isPhoto } from 'src/app/utils/stringUtils';
 
@@ -140,5 +145,16 @@ export class MediaPlayerComponent implements OnInit {
         this.cdr.markForCheck();
       }, 5000);
     }
+  }
+
+  orderNow() {
+    const name = this.item?.name || 'אאוריקה';
+    this.onClose();
+    navigateNonSmooth(this.router, '/');
+    setTimeout(() => {
+      navigateToContactFormAndMessage(
+        `היי אור! \nאשמח לשמוע פרטים נוספים על סדנת ` + name + '.'
+      );
+    }, 100);
   }
 }

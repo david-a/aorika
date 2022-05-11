@@ -6,6 +6,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap");
 @include f.font-geveret-levin;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   direction: v.$app-direction;
 }
@@ -33,6 +37,11 @@ button {
   margin: 0;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: lighten(v.$fg-color, 70%);
+}
+
 .dark-theme h1,
 .dark-theme h2,
 .dark-theme h3,
@@ -43,6 +52,11 @@ button {
 .dark-theme div,
 .dark-theme li {
   color: v.$bg-color;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+  color: darken(v.$bg-color, 70%);
 }
 
 .dark-theme a {

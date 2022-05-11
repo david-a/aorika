@@ -33,7 +33,7 @@
         {{ item.price }}₪
       </p>
 
-      <div class="share-buttons">
+      <div class="share-buttons margin-bottom">
         <!-- Twitter (url, text, @mention) -->
         <a
           target="_blank"
@@ -103,6 +103,11 @@
         </a>
 
         <span *ngIf="showClipboardCopied">הקישור הועתק ללוח!</span>
+      </div>
+      <div class="action-area">
+        <button *ngIf="item.type === 'product'" (click)="orderNow()">
+          רוצה כזה!
+        </button>
       </div>
     </div>
     <div
