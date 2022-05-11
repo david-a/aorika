@@ -1,8 +1,14 @@
 <div
   [attr.data-poster-url]="'aorika-background-poster' | asset"
   class="background-video dark-theme"
+  (click)="playVideoIfMobile()"
 >
-  <video id="main-background-video" autoplay="autoplay" loop="loop">
+  <video
+    id="main-background-video"
+    [autoplay]="!isMobile()"
+    loop="loop"
+    (pause)="onPause()"
+  >
     <source
       [src]="'videos/aorika-background-1080-10fps-mp4.mp4' | asset: 'video'"
     />
@@ -30,7 +36,7 @@
         </p>
       </div>
     </div>
-    <div class="column">
+    <div class="column image-column">
       <img [src]="'aori-what-bw.jpg' | asset" loading="lazy" alt="" />
     </div>
   </div>
@@ -39,7 +45,7 @@
 <div class="section" id="catalog">
   <div class="content-wrapper narrower">
     <h2 class="semi-bold">הקטלוג שלנו</h2>
-    <h4 class="handwriting margin-bottom">
+    <h4 class="handwriting centered-text margin-bottom">
       הנה כמה דוגמאות למוצרים שתוכלו לבנות אצלנו.
     </h4>
     <div class="catalog-wrapper sample-products">
@@ -57,7 +63,7 @@
 <div class="section green-section" id="gallery">
   <div class="content-wrapper narrower">
     <h2 class="semi-bold">הגלריה</h2>
-    <h4 class="handwriting margin-bottom">
+    <h4 class="handwriting centered-text margin-bottom">
       רוצים לראות את הקסם מקרוב? הנה הצצה לכמה מהסדנאות שערכנו.
     </h4>
     <div class="gallery-wrapper sample-images margin-bottom gallery-grid">
@@ -79,7 +85,7 @@
     <div class="column column-with-text dark-theme contact-card">
       <!-- <div class="sub-column-narrower contact-card"> -->
       <h2 class="centered-text semi-bold">דברו איתי</h2>
-      <h4 class="handwriting centered-text margin-bottom">
+      <h4 class="handwriting centered-text centered-text margin-bottom">
         אשמח לשמוע כל שאלה, בקשה או הצעה
       </h4>
       <p>

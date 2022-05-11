@@ -13,14 +13,15 @@ import {
   MediaPlayerItem,
   MediaPlayerService,
 } from 'src/app/services/media-player.service';
-import { BASE_URL } from 'src/app/utils/constants';
 import {
   elementInViewport,
+  isMobile,
   navigateNonSmooth,
   navigateToContactFormAndMessage,
 } from 'src/app/utils/domUtils';
 
 import { copyMessage, isPhoto } from 'src/app/utils/stringUtils';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-media-player',
@@ -72,7 +73,9 @@ export class MediaPlayerComponent implements OnInit {
   }
 
   onClose() {
-    (document.getElementById('main-background-video') as any)?.play();
+    if (!isMobile()) {
+      (document.getElementById('main-background-video') as any)?.play();
+    }
     this.mediaPlayerService.emitMediaPlayerItem(null);
   }
 
@@ -128,7 +131,9 @@ export class MediaPlayerComponent implements OnInit {
   }
 
   get shareUrl() {
-    return this.item && BASE_URL + `/${this.item.type}/${this.item.key}`;
+    return (
+      this.item && environment.baseUrl + `${this.item.type}/${this.item.key}`
+    );
   }
 
   get shareText() {

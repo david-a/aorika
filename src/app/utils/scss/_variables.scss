@@ -11,8 +11,9 @@ $app-direction: rtl;
 $content-width: 80%;
 $header-height: 70px; // Should be manually in sync with header.component.ts
 
-// Media Query (responseive) Mixins
+$image-base-url: "https://res.cloudinary.com/d3d/image/upload/Aorika/media/";
 
+// Media Query (responseive) Mixins
 //Large Screen - 993 to 1170 screen size
 @mixin lg-screen {
   @media only screen and (max-width: 1170px) {

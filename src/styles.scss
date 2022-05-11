@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -219,6 +220,10 @@ img.link-icon {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+
+  @include v.xs-screen {
+    grid-template-columns: 1fr;
+  }
 }
 
 // Common Elements
