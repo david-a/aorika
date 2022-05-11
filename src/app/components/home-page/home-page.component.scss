@@ -53,15 +53,13 @@
     width: 100%;
     height: 100%;
 
-    @include v.xs-screen {
-      height: 200px;
-    }
     &.contact-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       color: v.$or-white;
       background-color: v.$or-green;
+
       #contact-form {
         width: 80%;
         display: flex;
@@ -92,6 +90,10 @@
 #about .content-wrapper-columns,
 #about img {
   height: 400px;
+
+  @include v.xs-screen {
+    height: 200px;
+  }
 }
 
 .submit-message-wrapper {

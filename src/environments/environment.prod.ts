@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  contactFormTarget: 'https://formspree.io/f/mlezadba',
+  contactFormTarget: 'https://formspree.io/f/xayvaoyl',
 };
