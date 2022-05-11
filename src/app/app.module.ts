@@ -13,6 +13,7 @@ import { MediaPlayerComponent } from './components/media-player/media-player.com
 import { MediaPageComponent } from './components/media-page/media-page.component';
 import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
 import { AssetPipe } from './pipes/Asset.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AssetPipe } from './pipes/Asset.pipe';
     MediaPageComponent,
     MinuteSecondsPipe,
     AssetPipe,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

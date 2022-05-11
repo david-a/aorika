@@ -1,0 +1,12 @@
+@use "variables" as v;
+
+.footer-container {
+  width: 100%;
+  background-color: v.$or-black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
