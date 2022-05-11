@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div class="section" id="catalog">
+<div class="section" id="catalog-section">
   <div class="content-wrapper narrower">
     <h2 class="semi-bold">הקטלוג שלנו</h2>
     <h4 class="handwriting margin-bottom">
@@ -54,7 +54,7 @@
   </div>
 </div>
 
-<div class="section green-section" id="galley">
+<div class="section green-section" id="gallery-section">
   <div class="content-wrapper narrower">
     <h2 class="semi-bold">הגלריה</h2>
     <h4 class="handwriting margin-bottom">
@@ -72,9 +72,52 @@
   </div>
 </div>
 
-<div class="section" id="contact">
-  <div class="content-wrapper narrower">
-    <h2 class="semi-bold">דברו איתי</h2>
-    <h4 class="handwriting margin-bottom">אשמח לשמוע כל שאלה, בקשה או הצעה</h4>
+<div class="section" id="contact-section">
+  <div class="content-wrapper narrower"></div>
+
+  <div class="narrower content-wrapper-columns">
+    <div class="column column-with-text dark-theme contact-card">
+      <!-- <div class="sub-column-narrower contact-card"> -->
+      <h2 class="centered-text semi-bold">דברו איתי</h2>
+      <h4 class="handwriting centered-text margin-bottom">
+        אשמח לשמוע כל שאלה, בקשה או הצעה
+      </h4>
+      <p>
+        תרימו טלפון <a href="tel:0544480886">054-4480886</a>, דברו איתי
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=972544480886"
+          >בוואטסאפ</a
+        >, או שלחו לי מייל ממש כאן -
+      </p>
+      <div class="submit-message-wrapper">
+        <p *ngIf="submitMessage">{{ submitMessage }}</p>
+      </div>
+      <form
+        *ngIf="!submitMessage"
+        id="contact-form"
+        (submit)="onSubmitContactForm($event)"
+      >
+        <!-- <label>איך קוראים לך?</label> -->
+        <input required type="text" name="name" placeholder="שם" />
+
+        <!-- <label>מספר טלפון</label> -->
+        <input required type="phone" name="phone" placeholder="טלפון" />
+
+        <!-- <label>אימייל</label> -->
+        <input type="email" name="email" placeholder="אימייל" />
+
+        <!-- <label>במה אוכל לעזור?</label> -->
+        <textarea name="message" placeholder="במה אוכל לעזור?"></textarea>
+
+        <p *ngIf="submitError">{{ submitError }}</p>
+        <button type="submit" id="my-form-button">שלח</button>
+        <p id="my-form-status"></p>
+      </form>
+      <!-- </div> -->
+    </div>
+    <div class="column">
+      <img [src]="'boxes.jpg' | asset" loading="lazy" alt="" />
+    </div>
   </div>
 </div>

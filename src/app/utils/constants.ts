@@ -21,3 +21,7 @@ export const BASE_ASSETS_URL = {
   icon: 'https://res.cloudinary.com/d3d/image/upload/Aorika/icons/',
   font: 'https://res.cloudinary.com/d3d/raw/upload/Aorika/fonts/',
 };
+
+export const CONTACT_SUCCESS_MESSAGE = 'תודה רבה! אחזור אליך בהקדם!';
+
+export const CONTACT_FAILURE_MESSAGE = 'אופס! משהו קרה, נסו לשלוח שוב.';

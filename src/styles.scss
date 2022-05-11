@@ -22,6 +22,10 @@ a,
 span,
 div,
 li,
+input,
+input::placeholder,
+textarea,
+textarea::placeholder,
 button {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
@@ -39,6 +43,10 @@ button {
 .dark-theme div,
 .dark-theme li {
   color: v.$bg-color;
+}
+
+.dark-theme a {
+  font-weight: 600;
 }
 
 h1 {
@@ -208,6 +216,7 @@ button {
   color: v.$or-white;
   border: none;
   font-weight: 400;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -230,5 +239,18 @@ button {
     &:active {
       background-color: darken(v.$or-white, 10%);
     }
+  }
+}
+
+.dark-theme button {
+  background-color: darken(v.$or-green, 10%);
+
+  &:hover,
+  &:focus {
+    background-color: darken(v.$or-green, 20%);
+  }
+
+  &:active {
+    background-color: darken(v.$or-green, 30%);
   }
 }
