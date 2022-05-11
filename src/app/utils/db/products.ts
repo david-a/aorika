@@ -111,6 +111,7 @@ export const PRODUCTS: Indexable = {
     name: 'שׁוּפוּנִי',
     price: 750,
     duration: 360,
+    dimensions: '100x89x20 ס"מ',
     description: 'קונסולת מגירות גבוהה.',
     coverImage: 'sufuni.cutout.png',
     media: ['shufuni.jpg'],

@@ -9,6 +9,7 @@ import {
   CONTACT_FAILURE_MESSAGE,
   CONTACT_SUCCESS_MESSAGE,
 } from 'src/app/utils/constants';
+import { isMobile } from 'src/app/utils/domUtils';
 
 @Component({
   selector: 'app-home-page',
@@ -20,6 +21,7 @@ export class HomePageComponent implements OnInit {
   sampleWorkshops!: Workshop[];
   submitMessage?: string;
   submitError?: string;
+  isMobile = isMobile;
 
   constructor(
     private productService: ProductService,
@@ -35,6 +37,21 @@ export class HomePageComponent implements OnInit {
       'gallery',
       'homepage',
     ]);
+  }
+
+  playVideoIfMobile() {
+    const bgVideo = document.getElementById('main-background-video');
+    if (bgVideo) {
+      (bgVideo as any).style.display = 'block';
+      if (isMobile()) (bgVideo as any).play();
+    }
+  }
+
+  onPause() {
+    const bgVideo = document.getElementById('main-background-video');
+    if (bgVideo && isMobile()) {
+      (bgVideo as any).style.display = 'none';
+    }
   }
 
   async onSubmitContactForm(event: any) {

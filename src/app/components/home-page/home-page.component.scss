@@ -4,7 +4,17 @@
   height: 90vh;
 
   @include v.xs-screen {
-    height: 34vh;
+    height: 50vh;
+    background: url(v.$image-base-url + "aorika-background-poster") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    #main-background-video {
+      display: none;
+    }
+  }
+
+  @media (max-width: 750px) {
   }
 
   video {
@@ -23,6 +33,7 @@
     width: 100%;
     flex-direction: column;
     height: inherit;
+    filter: drop-shadow(5px 5px 4px v.$or-black);
 
     .hero-heading {
       font-size: 115px;
@@ -48,10 +59,20 @@
     gap: 10px;
   }
 
+  @include v.xs-screen {
+    .image-column {
+      grid-row: 1;
+    }
+  }
+
   .column,
   img {
     width: 100%;
     height: 100%;
+
+    @include v.xs-screen {
+      width: 80vw;
+    }
 
     &.contact-card {
       display: flex;
@@ -92,7 +113,7 @@
   height: 400px;
 
   @include v.xs-screen {
-    height: 200px;
+    height: auto;
   }
 }
 

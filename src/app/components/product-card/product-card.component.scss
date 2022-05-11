@@ -21,6 +21,7 @@
 
   @include v.xs-screen {
     grid-template-columns: 1fr;
+    height: initial;
   }
 
   .product-details {
@@ -30,6 +31,11 @@
 
   .product-image {
     height: inherit;
+
+    @include v.xs-screen {
+      height: initial;
+    }
+
     img {
       object-fit: cover;
       width: 100%;

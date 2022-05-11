@@ -23,7 +23,12 @@
         </ng-container>
       </p>
 
-      <p *ngIf="item.duration" class="price margin-bottom">
+      <p *ngIf="item.dimensions" class="dimensions margin-bottom">
+        <span class="semi-bold">מידות: </span>
+        {{ item.dimensions }}
+      </p>
+
+      <p *ngIf="item.duration" class="duration margin-bottom">
         <span class="semi-bold">משך הסדנה: </span>
         {{ item.duration | minuteSeconds }} שעות
       </p>

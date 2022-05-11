@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  baseUrl: 'http://localhost:4500/',
   contactFormTarget: 'https://formspree.io/f/mlezadba',
 };
 

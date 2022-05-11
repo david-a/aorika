@@ -32,12 +32,17 @@ export const navigateNonSmooth = (router: any, path: string = '/') => {
 };
 
 export const navigateToContactFormAndMessage = (message: string) => {
-  const form = document.querySelector('#contact-form');
-  if (form && !elementInViewport(form)) {
-    form.scrollIntoView();
+  const contactSection = document.querySelector('#contact');
+  if (contactSection && !elementInViewport(contactSection)) {
+    contactSection.scrollIntoView();
   }
   const messageElement = document.querySelector('#contact-form-message');
   if (messageElement) {
     (messageElement as any).value = message;
   }
 };
+
+export const isMobile = () =>
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
