@@ -36,4 +36,28 @@ export const WORKSHOPS: Indexable = {
       homepage: true,
     },
   },
+  '20211015_001': {
+    date: '2021-10-15',
+    description: 'משפחת בן שלום',
+    products: ['trifonas'],
+    coverImage: '20211015_shalom_00010.jpg',
+    media: [
+      '20211015_shalom_00001.jpg',
+      '20211015_shalom_00002.jpg',
+      '20211015_shalom_00003.jpg',
+      '20211015_shalom_00004.jpg',
+      '20211015_shalom_00005.jpg',
+      '20211015_shalom_00006.jpg',
+      '20211015_shalom_00007.jpg',
+      '20211015_shalom_00008.jpg',
+      '20211015_shalom_00009.jpg',
+      '20211015_shalom_00010.jpg',
+      '20211015_shalom_00011.jpg',
+      '20211015_shalom_00012.jpg',
+    ],
+    tags: {
+      gallery: true,
+      homepage: true,
+    },
+  },
 };

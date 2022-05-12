@@ -7,7 +7,7 @@
 >
   <a class="close-media-player" (click)="onClose()">X</a>
   <div class="gallery-container" (click)="$event.stopPropagation()">
-    <div class="grid-item item-info">
+    <div class="grid-item item-info" #infoItem>
       <h2 class="semi-bold">{{ item.name }}</h2>
       <p class="description margin-bottom">
         {{ item.description }}
@@ -23,7 +23,7 @@
         </ng-container>
       </p>
 
-      <p *ngIf="item.dimensions" class="dimensions margin-bottom">
+      <p *ngIf="item.dimensions" class="dimensions margin-bottom small">
         <span class="semi-bold">מידות: </span>
         {{ item.dimensions }}
       </p>

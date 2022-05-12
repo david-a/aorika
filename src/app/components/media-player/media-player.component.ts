@@ -39,7 +39,7 @@ export class MediaPlayerComponent implements OnInit {
   overlay?: boolean;
   showClipboardCopied = false;
 
-  @ViewChild('mediaPlayerRef') mediaPlayerRef?: ElementRef;
+  @ViewChild('infoItem') infoItemRef?: ElementRef;
 
   constructor(
     private cdr: ChangeDetectorRef,
@@ -83,8 +83,14 @@ export class MediaPlayerComponent implements OnInit {
     event.stopPropagation();
     if (this.selected !== url) {
       this.selected = url;
+      if (
+        !isMobile() &&
+        this.infoItemRef &&
+        !elementInViewport(this.infoItemRef)
+      ) {
+        this.infoItemRef?.nativeElement.scrollIntoView();
+      }
       const allVideos = document.querySelectorAll('.media-player video') as any;
-      window.scrollTo(this.mediaPlayerRef?.nativeElement.yPosition);
       setTimeout(() => {
         allVideos?.forEach((vid: any) => {
           const selected = vid?.querySelector('*')?.closest('.selected');

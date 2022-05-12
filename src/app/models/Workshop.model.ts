@@ -43,7 +43,7 @@ export class Workshop extends Base {
     return assetUrl(
       `workshops/${this.key}/${this.coverImage || this.media[0]}`,
       'image',
-      300
+      'c_fill,g_faces,h_300'
     );
   }
 }

@@ -34,7 +34,7 @@ export class Product extends Base {
     return assetUrl(
       `products/${this.key}/${this.coverImage || this.media[0]}`,
       'image',
-      300
+      'h_300'
     );
   }
 }

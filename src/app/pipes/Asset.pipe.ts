@@ -13,8 +13,11 @@ export class AssetPipe implements PipeTransform {
 export const assetUrl = (
   path: string,
   type: AssetType = 'image',
-  height?: number
+  transformationString?: string
 ): string =>
-  (height
-    ? BASE_ASSETS_URL[type].replace('/upload/', `/upload/h_${height}/`)
+  (transformationString
+    ? BASE_ASSETS_URL[type].replace(
+        '/upload/',
+        `/upload/${transformationString}/`
+      )
     : BASE_ASSETS_URL[type]) + path;
