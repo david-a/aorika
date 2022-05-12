@@ -33,3 +33,6 @@ export const complementZeros = (
   if (zerosToComplement < 0) return num;
   return '0'.repeat(complementToDigits - num.toString().length) + num;
 };
+
+export const filenameFromUrl = (url?: string) =>
+  !!url && (url.match(/[^/\\&\?]+\.\w{3,4}(?=([\?&].*$|$))/) || [])[0];

@@ -20,7 +20,11 @@ import {
   navigateToContactFormAndMessage,
 } from 'src/app/utils/domUtils';
 
-import { copyMessage, isPhoto } from 'src/app/utils/stringUtils';
+import {
+  copyMessage,
+  filenameFromUrl,
+  isPhoto,
+} from 'src/app/utils/stringUtils';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -55,11 +59,14 @@ export class MediaPlayerComponent implements OnInit {
         this.showClipboardCopied = false;
         this.overlay = event?.overlay;
         this.seed = Math.random();
-        this.selected = this.item?.allMediaUrls.includes(
-          this.item?.coverImageUrl
-        )
-          ? this.item?.coverImageUrl
-          : this.item?.allMediaUrls[0];
+        const coverImageIndexInMedia =
+          !!this.item?.coverImage &&
+          this.item?.media.indexOf(this.item.coverImage);
+        this.selected =
+          this.item?.allMediaUrls[
+            (coverImageIndexInMedia >= 0 && coverImageIndexInMedia) || 0
+          ];
+
         this.item &&
           (document.getElementById('main-background-video') as any)?.pause();
         this.cdr.markForCheck();
@@ -101,7 +108,7 @@ export class MediaPlayerComponent implements OnInit {
   }
 
   isExternalVideo(url: string) {
-    return url.startsWith('http');
+    return url.includes('youtube.com');
   }
 
   bypassSecurityTrustResourceUrl(url: string) {
@@ -133,7 +140,7 @@ export class MediaPlayerComponent implements OnInit {
   }
 
   isSelected(url: string) {
-    return url === this.selected;
+    return filenameFromUrl(url) === filenameFromUrl(this.selected);
   }
 
   get shareUrl() {

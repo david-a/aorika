@@ -60,4 +60,38 @@ export const WORKSHOPS: Indexable = {
       homepage: true,
     },
   },
+  '20200726_001': {
+    date: '2021-07-26',
+    description: 'גננות מעלה גלבוע - רינה',
+    products: ['kabaryolet', 'spicy'],
+    coverImage: '20200726_rina_00004.jpg',
+    media: [
+      '20200726_rina_00001.webm',
+      '20200726_rina_00002.jpg',
+      '20200726_rina_00003.jpg',
+      '20200726_rina_00004.jpg',
+      '20200726_rina_00005.jpg',
+    ],
+    tags: {
+      gallery: true,
+      homepage: true,
+    },
+  },
+  '20200802_001': {
+    date: '2021-08-02',
+    description: 'גננות מעלה גלבוע - חן',
+    products: ['kabaryolet', 'maamool'],
+    coverImage: '20200802_chen_00005.jpg',
+    media: [
+      '20200802_chen_00001.jpg',
+      '20200802_chen_00002.jpg',
+      '20200802_chen_00003.jpg',
+      '20200802_chen_00004.jpg',
+      '20200802_chen_00005.jpg',
+    ],
+    tags: {
+      gallery: true,
+      homepage: true,
+    },
+  },
 };

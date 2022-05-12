@@ -7,8 +7,15 @@ export const PRODUCTS: Indexable = {
     duration: 4.5 * 60,
     dimensions: 'רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ',
     description: 'ספסל',
-    coverImage: 'fanan.jpg',
-    media: ['fanan.jpg'],
+    coverImage: 'fanan_00004.JPG',
+    media: [
+      'fanan.jpg',
+      // 'fanan_00001.JPG',
+      'fanan_00002.JPG',
+      'fanan_00003.JPG',
+      'fanan_00004.JPG',
+      'fanan_00005.JPG',
+    ],
     tags: {
       catalog: true,
       homepage: true,
@@ -22,7 +29,7 @@ export const PRODUCTS: Indexable = {
     dimensions: 'רוחב: 60 ס״מ | עומק: 40 ס״מ | גובה: 40 ס״מ',
     description: 'ארגז על גלגלים עם מכסה מרופד',
     coverImage: 'kabaryolet.jpg',
-    media: ['kabaryolet.jpg'],
+    media: ['kabaryolet.jpg', 'kabaryolet_00001.jpg', 'kabaryolet_00002.jpg'],
     tags: {
       catalog: true,
       homepage: true,
