@@ -1,55 +1,6 @@
 import { Indexable } from 'src/app/interfaces/Indexable';
 
 export const PRODUCTS: Indexable = {
-  fanan: {
-    name: 'פַנָאן',
-    price: 750,
-    duration: 4.5 * 60,
-    dimensions: 'רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ',
-    description: 'ספסל',
-    coverImage: 'fanan_00004.JPG',
-    media: [
-      'fanan.jpg',
-      // 'fanan_00001.JPG',
-      'fanan_00002.JPG',
-      'fanan_00003.JPG',
-      'fanan_00004.JPG',
-      'fanan_00005.JPG',
-    ],
-    tags: {
-      catalog: true,
-      homepage: true,
-    },
-  },
-
-  kabaryolet: {
-    name: 'קָבַּרְיוֹלֶט',
-    price: 550,
-    duration: 5 * 60,
-    dimensions: 'רוחב: 60 ס״מ | עומק: 40 ס״מ | גובה: 40 ס״מ',
-    description: 'ארגז על גלגלים עם מכסה מרופד',
-    coverImage: 'kabaryolet.jpg',
-    media: ['kabaryolet.jpg', 'kabaryolet_00001.jpg', 'kabaryolet_00002.jpg'],
-    tags: {
-      catalog: true,
-      homepage: true,
-    },
-  },
-
-  kabuk: {
-    name: 'קַבּוּק',
-    price: 750,
-    duration: 6 * 60,
-    dimensions: 'רוחב: 87 ס״מ | עומק: 40 ס״מ | גובה: 90 ס״מ',
-    description: 'מעמד כפול לספרים',
-    coverImage: 'kabuk.jpg',
-    media: ['kabuk.jpg'],
-    tags: {
-      catalog: true,
-      homepage: true,
-    },
-  },
-
   layback: {
     name: 'לֵייבָּאק',
     price: 750,
@@ -78,14 +29,97 @@ export const PRODUCTS: Indexable = {
     },
   },
 
+  barista: {
+    name: 'בָּרִיסְטָה',
+    price: 450,
+    duration: 3.5 * 60,
+    dimensions: 'רוחב: 60 ס״מ | עומק: 15 ס״מ | גובה: 32 ס״מ',
+    description: 'מדף לקפה (אבל לא רק:)',
+    coverImage: 'barista.cutout1.png',
+    media: [
+      'barista.jpg',
+      'barista_00001.jpg',
+      // 'barista_00002.jpg',
+      // 'barista_00003.jpg',
+      // 'barista_00004.jpg',
+    ],
+    tags: {
+      catalog: true,
+      homepage: true,
+    },
+  },
+
   sahbak: {
     name: 'סַחְבָּק',
-    price: 350,
+    price: 450,
     duration: 3.5 * 60,
     dimensions: 'רוחב: 40 ס״מ | עומק: 20 ס״מ | גובה: 60 ס״מ',
     description: 'שידת לילה עם מגירה',
     coverImage: 'sahbak.cutout.png',
     media: ['sahbak.jpg'],
+    tags: {
+      catalog: true,
+      homepage: true,
+    },
+  },
+
+  shwaye: {
+    name: 'שׁוואיֶה',
+    price: 850,
+    duration: 5.5 * 60,
+    dimensions: 'רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ',
+    description: 'ספסל עם מדף',
+    coverImage: 'shwaye_00004.JPG',
+    media: [
+      // 'shwaye.jpg',
+      // 'shwaye_00001.JPG',
+      'shwaye_00002.JPG',
+      'shwaye_00003.JPG',
+      'shwaye_00004.JPG',
+      'shwaye_00005.JPG',
+    ],
+    tags: {
+      catalog: false,
+      homepage: false,
+    },
+  },
+
+  kabuk: {
+    name: 'קַבּוּק',
+    price: 750,
+    duration: 6 * 60,
+    dimensions: 'רוחב: 87 ס״מ | עומק: 40 ס״מ | גובה: 90 ס״מ',
+    description: 'מעמד כפול לספרים',
+    coverImage: 'kabuk.jpg',
+    media: ['kabuk.jpg'],
+    tags: {
+      catalog: true,
+      homepage: true,
+    },
+  },
+
+  fanan: {
+    name: 'פַנָאן',
+    price: 750,
+    duration: 4.5 * 60,
+    dimensions: 'רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ',
+    description: 'ספסל עם מדף',
+    coverImage: 'fanan.jpg',
+    media: ['fanan.jpg', 'fanan2.jpg'],
+    tags: {
+      catalog: true,
+      homepage: true,
+    },
+  },
+
+  kabaryolet: {
+    name: 'קָבַּרְיוֹלֶט',
+    price: 550,
+    duration: 5 * 60,
+    dimensions: 'רוחב: 60 ס״מ | עומק: 40 ס״מ | גובה: 40 ס״מ',
+    description: 'ארגז על גלגלים עם מכסה מרופד',
+    coverImage: 'kabaryolet.jpg',
+    media: ['kabaryolet.jpg', 'kabaryolet_00001.jpg', 'kabaryolet_00002.jpg'],
     tags: {
       catalog: true,
       homepage: true,
