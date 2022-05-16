@@ -23,6 +23,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     window.removeEventListener('scroll', this.scrollEvent, true);
   }
 
+  isSelected(page: string) {
+    return (
+      page === window.location.pathname.trim().toLowerCase().replace('/', '')
+    );
+  }
+
   scrollEvent = (): void => {
     if (
       document.body.scrollTop > this.defaultHeight ||

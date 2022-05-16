@@ -11,9 +11,18 @@
       />
     </a>
     <nav role="navigation" class="nav-menu flex-centered">
-      <a routerLink="/catalog" class="nav-link">הקטלוג</a
-      ><a href="/gallery" class="nav-link">גלריה</a>
-      <a href="/groups" class="nav-link"
+      <a
+        routerLink="/catalog"
+        [class.selected]="isSelected('catalog')"
+        class="nav-link"
+        >הקטלוג</a
+      ><a
+        href="/gallery"
+        [class.selected]="isSelected('gallery')"
+        class="nav-link"
+        >גלריה</a
+      >
+      <a href="/groups" [class.selected]="isSelected('groups')" class="nav-link"
         ><span *ngIf="!isMobile()">סדנאות ל</span>קבוצות</a
       >
     </nav>

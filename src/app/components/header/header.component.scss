@@ -26,6 +26,11 @@
         @include v.xs-screen {
           padding: 10px;
         }
+
+        &.selected:not(:hover),
+        &.selected:not(:hover) span {
+          color: v.$or-green;
+        }
       }
     }
   }

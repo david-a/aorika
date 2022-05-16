@@ -5,6 +5,7 @@ import {
   ChangeDetectorRef,
   ElementRef,
   ViewChild,
+  HostListener,
 } from '@angular/core';
 import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
@@ -77,6 +78,11 @@ export class MediaPlayerComponent implements OnInit {
     Object.keys(this.subscriptions).forEach((key) =>
       this.subscriptions[key]?.unsubscribe()
     );
+  }
+
+  @HostListener('document:keyup.escape', ['$event'])
+  escHandler(event: KeyboardEvent) {
+    this.overlay && this.onClose();
   }
 
   onClose() {
