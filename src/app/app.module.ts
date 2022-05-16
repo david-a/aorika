@@ -15,6 +15,7 @@ import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
 import { AssetPipe } from './pipes/Asset.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 import { GroupsPageComponent } from './components/groups-page/groups-page.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { GroupsPageComponent } from './components/groups-page/groups-page.compon
     FooterComponent,
     GroupsPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ScullyLibModule],
   providers: [],
   bootstrap: [AppComponent],
 })

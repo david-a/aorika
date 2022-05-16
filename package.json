@@ -4,13 +4,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start_scully": "yarn scully serve",
     "start_prod": "ng serve --configuration=production",
     "build": "ng build",
+    "build_scully": "ng build && yarn scully",
     "build_prod": "ng build --configuration=production",
     "build_prod_scully": "ng build --configuration=production && yarn scully",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +25,13 @@
     "@angular/forms": "~13.3.8",
     "@angular/platform-browser": "~13.3.8",
     "@angular/platform-browser-dynamic": "~13.3.8",
+    "@angular/platform-server": "^12",
     "@angular/router": "~13.3.8",
+    "@scullyio/init": "2.1.32",
+    "@scullyio/ng-lib": "^2.1.0",
+    "@scullyio/platform-server": "^2.1.0",
+    "@scullyio/scully": "^2.1.0",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.32",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
