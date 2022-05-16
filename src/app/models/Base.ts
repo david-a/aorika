@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { Indexable } from '../interfaces/Indexable';
 export class Base implements Indexable {
   [k: string]: any;
@@ -8,4 +9,8 @@ export class Base implements Indexable {
   // addedAt?(): Date | undefined {
   //   return (this.dateAdded && new Date(this.dateAdded)) || undefined;
   // }
+
+  get shareUrl() {
+    return environment.baseUrl + `${this.type}/${this.key}`;
+  }
 }

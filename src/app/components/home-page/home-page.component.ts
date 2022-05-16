@@ -8,8 +8,10 @@ import { WorkshopService } from 'src/app/services/workshop.service';
 import {
   CONTACT_FAILURE_MESSAGE,
   CONTACT_SUCCESS_MESSAGE,
+  DEFAULT_META_DATA,
 } from 'src/app/utils/constants';
 import { isMobile } from 'src/app/utils/domUtils';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-page',
@@ -25,10 +27,17 @@ export class HomePageComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private workshopService: WorkshopService
+    private workshopService: WorkshopService,
+    private titleService: Title,
+    private metaService: Meta
   ) {}
 
   ngOnInit(): void {
+    this.titleService.setTitle(DEFAULT_META_DATA.title);
+    this.metaService.updateTag({
+      property: 'og:url',
+      content: environment.baseUrl,
+    });
     this.sampleProducts = this.productService.getRandomProducts(3, [
       'catalog',
       'homepage',

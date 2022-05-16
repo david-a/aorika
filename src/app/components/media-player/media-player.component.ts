@@ -6,7 +6,7 @@ import {
   ElementRef,
   ViewChild,
 } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import {
@@ -144,9 +144,7 @@ export class MediaPlayerComponent implements OnInit {
   }
 
   get shareUrl() {
-    return (
-      this.item && environment.baseUrl + `${this.item.type}/${this.item.key}`
-    );
+    return this.item?.shareUrl;
   }
 
   get shareText() {

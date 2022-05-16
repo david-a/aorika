@@ -23,3 +23,15 @@ export const BASE_ASSETS_URL = {
 export const CONTACT_SUCCESS_MESSAGE = 'תודה רבה! אחזור אליך בהקדם!';
 
 export const CONTACT_FAILURE_MESSAGE = 'אופס! משהו קרה, נסו לשלוח שוב.';
+
+export const DEFAULT_META_DATA = {
+  title: 'אאוריקה - סדנאות יצירה בעץ',
+  keywords:
+    'אאוריקה, נגריה, עץ, סדנאות, יצירה, מלאכה, מסור, חוג, ילדים, קבוצות, חינוך בלתי פורמלי',
+  description:
+    'סדנאות אאוריקה ליצירה בעץ - בואו להתנסות בבניית מוצרי עץ שונים, לצבוע ולהתאים אותם כרצונכם. חוויה זוגית, משפחתית, וקבוצתית מעשירה, מעצימה ומהנה!',
+  og_description:
+    'אאוריקה סדנאות יצירה בעץ-חוויה זוגית/משפחתית/קבוצתית מעצימה ומהנה',
+  robots: 'index, follow',
+  og_image_filename: 'aori-what-bw.jpg',
+};

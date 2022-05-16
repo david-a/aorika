@@ -233,8 +233,8 @@ export const PRODUCTS: Indexable = {
 
   alef: {
     name: 'אָלֶף',
-    price: 45,
-    groupPrice: 35,
+    // price: 45,
+    // groupPrice: 35,
     dimensions: 'רוחב: 30 ס״מ | עומק: 2 ס״מ | גובה: 14 ס״מ',
     description: 'מתלה צבעוני',
     coverImage: 'alef.cutout.png',
@@ -257,8 +257,8 @@ export const PRODUCTS: Indexable = {
 
   beit: {
     name: 'בֵּית',
-    price: 65,
-    groupPrice: 55,
+    // price: 65,
+    // groupPrice: 55,
     dimensions: 'רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 30 ס״מ',
     description: 'מסגרת בעיצוב אישי ורשת תליה.',
     coverImage: 'beit.cutout2.png',
@@ -278,8 +278,8 @@ export const PRODUCTS: Indexable = {
 
   gimel: {
     name: 'גִּימֶל',
-    price: 65,
-    groupPrice: 55,
+    // price: 65,
+    // groupPrice: 55,
     dimensions: 'רוחב: 20 ס״מ | אורך: 20 ס״מ | גובה: 4 ס״מ',
     description: 'משחק איקס עיגול.',
     coverImage: 'gimel_00002.JPG',
@@ -301,8 +301,8 @@ export const PRODUCTS: Indexable = {
 
   dalet: {
     name: 'דָּלֶת',
-    price: 45,
-    groupPrice: 35,
+    // price: 45,
+    // groupPrice: 35,
     dimensions: 'רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 14 ס״מ',
     description: 'מדפון עם מתלים.',
     coverImage: 'dalet.cutout2.png',
@@ -316,10 +316,10 @@ export const PRODUCTS: Indexable = {
 
   hey: {
     name: 'הֵא',
-    price: 75,
-    groupPrice: 65,
+    // price: 75,
+    // groupPrice: 65,
     dimensions: 'רוחב: 30 ס״מ | עומק: 14 ס״מ | גובה: 12 ס״מ',
-    description: 'מיני אדנית.',
+    description: 'מיני אדנית (כולל אדמה ופרחים).',
     coverImage: 'hey_00001.jpg',
     // coverImage: 'hey.cutout2',
     media: ['hey.jpg'],

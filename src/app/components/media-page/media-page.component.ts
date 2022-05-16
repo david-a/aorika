@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { Indexable } from 'src/app/interfaces/Indexable';
-import { MediaPlayerService } from 'src/app/services/media-player.service';
+import { assetUrl } from 'src/app/pipes/Asset.pipe';
+import {
+  MediaPlayerItem,
+  MediaPlayerService,
+} from 'src/app/services/media-player.service';
 import { ProductService } from 'src/app/services/product.service';
 import { WorkshopService } from 'src/app/services/workshop.service';
+import { DEFAULT_META_DATA } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-media-page',
@@ -12,6 +18,7 @@ import { WorkshopService } from 'src/app/services/workshop.service';
   styleUrls: ['./media-page.component.scss'],
 })
 export class MediaPageComponent implements OnInit {
+  item?: MediaPlayerItem;
   subscriptions: { [key: string]: Subscription } = {};
   dbServices: any;
 
@@ -19,7 +26,9 @@ export class MediaPageComponent implements OnInit {
     private route: ActivatedRoute,
     private mediaPlayerService: MediaPlayerService,
     private productService: ProductService,
-    private workshopService: WorkshopService
+    private workshopService: WorkshopService,
+    private titleService: Title,
+    private metaService: Meta
   ) {
     this.dbServices = {
       product: productService,
@@ -38,6 +47,10 @@ export class MediaPageComponent implements OnInit {
     Object.keys(this.subscriptions).forEach((key) =>
       this.subscriptions[key]?.unsubscribe()
     );
+    this.metaService.updateTag({
+      property: 'og:image',
+      content: assetUrl(DEFAULT_META_DATA.og_image_filename),
+    });
   }
 
   get urlItemKeyType() {
@@ -50,10 +63,28 @@ export class MediaPageComponent implements OnInit {
     const keyFromUrl = params.id;
 
     if (keyFromUrl) {
-      const item =
+      this.item =
         this.urlItemKeyType &&
         this.dbServices[this.urlItemKeyType].getItemByKey(keyFromUrl);
-      item && this.mediaPlayerService.emitMediaPlayerItem({ item });
+      if (this.item) {
+        this.mediaPlayerService.emitMediaPlayerItem({ item: this.item });
+
+        this.titleService.setTitle(
+          (this.item.name ? this.item.name + ' - ' : '') +
+            (this.item.description
+              ? this.item.description.trim().replace(/\.$/, '') + ' - '
+              : '') +
+            'סדנת אֵאוֹרִיקָה'
+        );
+        this.metaService.updateTag({
+          property: 'og:url',
+          content: this.item.shareUrl,
+        });
+        this.metaService.updateTag({
+          property: 'og:image',
+          content: this.item?.coverImageUrl,
+        });
+      }
     }
   };
 }
