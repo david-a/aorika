@@ -1,0 +1,27 @@
+<div class="section lower-than-header" id="groups">
+  <div class="content-wrapper narrower">
+    <h2 class="semi-bold">סדנאות לקבוצות</h2>
+    <h4 class="handwriting centered-text margin-bottom">
+      מה יותר כיף מליצור משהו חדש? לעשות את זה ביחד, כמובן!
+    </h4>
+    <p class="centered-text margin-bottom">
+      אאוריקה תשמח להגיע עד אליכם לסדנאות קלילות מרובות משתתפים המותאמות לכל
+      הגילאים.<br />
+      הנחות לקבוצות גדולות<span class="green">*</span> (20+ משתתפים). <br />ניתן
+      להוסיף מוצרים מרשימה זו לסדנה רגילה ואף להזמין קיטים בלבד ללא הדרכה.
+      <br />להזמנות ופרטים נוספים <a (click)="contactMe()">צרו קשר כאן</a>.
+    </p>
+    <div class="catalog-wrapper sample-products">
+      <app-product-card
+        *ngFor="let product of products"
+        [product]="product"
+        [id]="product.key"
+      ></app-product-card>
+    </div>
+    <h4 class="handwriting centered-text margin-bottom">
+      לא מצאתם משהו מתאים?
+      <a class="handwriting" (click)="contactMe()">דברו איתי</a>
+      ונחשוב על משהו ביחד!
+    </h4>
+  </div>
+</div>

@@ -65,7 +65,8 @@ textarea::placeholder {
   color: darken(v.$bg-color, 70%);
 }
 
-.dark-theme a {
+.dark-theme a,
+.dark-theme a span {
   font-weight: 600;
 }
 
@@ -119,19 +120,22 @@ p {
   }
 }
 
-a {
+a,
+a span {
   text-decoration: none;
   color: v.$or-green;
   transition: color 0.4s text-decoration 0.4s;
 }
 
-a:hover:not(.disabled) {
+a:hover:not(.disabled),
+a:hover:not(.disabled) span {
   text-decoration: underline;
   color: darken(v.$or-green, 20%);
   cursor: pointer;
 }
 
-a:active:not(.disabled) {
+a:active:not(.disabled),
+a:active:not(.disabled) span {
   text-decoration: underline;
   color: darken(v.$or-green, 40%);
 }
@@ -158,6 +162,10 @@ img.link-icon {
 
 .green {
   color: v.$or-green !important;
+}
+
+.pink {
+  color: v.$or-pink !important;
 }
 
 .handwriting {

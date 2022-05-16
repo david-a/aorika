@@ -13,6 +13,9 @@
     <nav role="navigation" class="nav-menu flex-centered">
       <a routerLink="/catalog" class="nav-link">הקטלוג</a
       ><a href="/gallery" class="nav-link">גלריה</a>
+      <a href="/groups" class="nav-link"
+        ><span *ngIf="!isMobile()">סדנאות ל</span>קבוצות</a
+      >
     </nav>
   </div>
 </div>

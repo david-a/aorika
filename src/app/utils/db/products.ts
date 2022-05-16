@@ -1,20 +1,6 @@
 import { Indexable } from 'src/app/interfaces/Indexable';
 
 export const PRODUCTS: Indexable = {
-  layback: {
-    name: 'לֵייבָּאק',
-    price: 750,
-    duration: 5 * 60,
-    dimensions: 'רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ',
-    description: 'ספסל גינה עם משענת',
-    coverImage: 'layback.cutout.png',
-    media: ['layback.jpg'],
-    tags: {
-      catalog: true,
-      homepage: true,
-    },
-  },
-
   maamool: {
     name: 'מַעמוּל',
     price: 450,
@@ -29,11 +15,25 @@ export const PRODUCTS: Indexable = {
     },
   },
 
+  sahbak: {
+    name: 'סַחְבָּק',
+    price: 450,
+    duration: 3.5 * 60,
+    dimensions: 'רוחב: 40 ס״מ | עומק: 20 ס״מ | גובה: 60 ס״מ',
+    description: 'שידת לילה עם מגירה',
+    coverImage: 'sahbak.cutout.png',
+    media: ['sahbak.jpg'],
+    tags: {
+      catalog: true,
+      homepage: true,
+    },
+  },
+
   barista: {
     name: 'בָּרִיסְטָה',
     price: 450,
-    duration: 3.5 * 60,
-    dimensions: 'רוחב: 60 ס״מ | עומק: 15 ס״מ | גובה: 32 ס״מ',
+    duration: 4 * 60,
+    dimensions: 'רוחב: 60 ס״מ | עומק: 14 ס״מ | גובה: 32 ס״מ',
     description: 'מדף לקפה (אבל לא רק:)',
     coverImage: 'barista.cutout1.png',
     media: [
@@ -43,20 +43,6 @@ export const PRODUCTS: Indexable = {
       // 'barista_00003.jpg',
       // 'barista_00004.jpg',
     ],
-    tags: {
-      catalog: true,
-      homepage: true,
-    },
-  },
-
-  sahbak: {
-    name: 'סַחְבָּק',
-    price: 450,
-    duration: 3.5 * 60,
-    dimensions: 'רוחב: 40 ס״מ | עומק: 20 ס״מ | גובה: 60 ס״מ',
-    description: 'שידת לילה עם מגירה',
-    coverImage: 'sahbak.cutout.png',
-    media: ['sahbak.jpg'],
     tags: {
       catalog: true,
       homepage: true,
@@ -126,6 +112,20 @@ export const PRODUCTS: Indexable = {
     },
   },
 
+  layback: {
+    name: 'לֵייבָּאק',
+    price: 750,
+    duration: 5 * 60,
+    dimensions: 'רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ',
+    description: 'ספסל גינה עם משענת',
+    coverImage: 'layback.cutout.png',
+    media: ['layback.jpg'],
+    tags: {
+      catalog: true,
+      homepage: true,
+    },
+  },
+
   shaiba: {
     name: 'שַׁיְיבָּה',
     price: 180,
@@ -156,7 +156,7 @@ export const PRODUCTS: Indexable = {
     name: 'סִינְגֶל',
     price: 250,
     duration: 3 * 60,
-    dimensions: 'רוחב: 60 ס״מ | עומק: 15 ס״מ | גובה: 18 ס״מ',
+    dimensions: 'רוחב: 60 ס״מ | עומק: 14 ס״מ | גובה: 18 ס״מ',
     description: 'מדף בודד עם מתלים',
     coverImage: 'single.cutout.png',
     media: ['single.jpg'],
@@ -221,13 +221,112 @@ export const PRODUCTS: Indexable = {
     name: 'אוּמָאמִי',
     price: 450,
     duration: 4 * 60,
-    dimensions: 'רוחב: 61 ס״מ | עומק: 15 ס״מ | גובה: 40 ס״מ',
+    dimensions: 'רוחב: 61 ס״מ | עומק: 14 ס״מ | גובה: 40 ס״מ',
     description: 'יחידת מדפים עם מתלים',
     coverImage: 'umami.jpg',
     media: ['umami.jpg'],
     tags: {
       catalog: true,
       homepage: true,
+    },
+  },
+
+  alef: {
+    name: 'אָלֶף',
+    price: 45,
+    groupPrice: 35,
+    dimensions: 'רוחב: 30 ס״מ | עומק: 2 ס״מ | גובה: 14 ס״מ',
+    description: 'מתלה צבעוני',
+    coverImage: 'alef.cutout.png',
+    media: [
+      'alef_00001.JPG',
+      'alef_00002.JPG',
+      'alef_00003.JPG',
+      'alef_00004.JPG',
+      'alef_00005.JPG',
+      'alef_00006.JPG',
+      'alef_00007.JPG',
+      'alef_00008.JPG',
+    ],
+    tags: {
+      catalog: false,
+      homepage: false,
+      groups: true,
+    },
+  },
+
+  beit: {
+    name: 'בֵּית',
+    price: 65,
+    groupPrice: 55,
+    dimensions: 'רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 30 ס״מ',
+    description: 'מסגרת בעיצוב אישי ורשת תליה.',
+    coverImage: 'beit.cutout2.png',
+    media: [
+      'beit_00001.JPG',
+      'beit_00002.JPG',
+      'beit_00003.JPG',
+      'beit_00004.JPG',
+      'beit_00005.jpg',
+    ],
+    tags: {
+      catalog: false,
+      homepage: false,
+      groups: true,
+    },
+  },
+
+  gimel: {
+    name: 'גִּימֶל',
+    price: 65,
+    groupPrice: 55,
+    dimensions: 'רוחב: 20 ס״מ | אורך: 20 ס״מ | גובה: 4 ס״מ',
+    description: 'משחק איקס עיגול.',
+    coverImage: 'gimel_00002.JPG',
+    media: [
+      'gimel_00001.JPG',
+      'gimel_00002.JPG',
+      'gimel_00003.JPG',
+      'gimel_00004.JPG',
+      'gimel_00005.jpg',
+      'gimel_00006.JPG',
+      'gimel_00007.jpg',
+    ],
+    tags: {
+      catalog: false,
+      homepage: false,
+      groups: true,
+    },
+  },
+
+  dalet: {
+    name: 'דָּלֶת',
+    price: 45,
+    groupPrice: 35,
+    dimensions: 'רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 14 ס״מ',
+    description: 'מדפון עם מתלים.',
+    coverImage: 'dalet.cutout2.png',
+    media: ['dalet_00001.JPG'],
+    tags: {
+      catalog: false,
+      homepage: false,
+      groups: true,
+    },
+  },
+
+  hey: {
+    name: 'הֵא',
+    price: 75,
+    groupPrice: 65,
+    dimensions: 'רוחב: 30 ס״מ | עומק: 14 ס״מ | גובה: 12 ס״מ',
+    description: 'מיני אדנית.',
+    coverImage: 'hey_00001.jpg',
+    // coverImage: 'hey.cutout2',
+    media: ['hey.jpg'],
+    tags: {
+      catalog: false,
+      homepage: false,
+      groups: true,
     },
   },
 };

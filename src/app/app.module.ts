@@ -14,6 +14,7 @@ import { MediaPageComponent } from './components/media-page/media-page.component
 import { MinuteSecondsPipe } from './pipes/MinuteSeconds.pipe';
 import { AssetPipe } from './pipes/Asset.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import { GroupsPageComponent } from './components/groups-page/groups-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MinuteSecondsPipe,
     AssetPipe,
     FooterComponent,
+    GroupsPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

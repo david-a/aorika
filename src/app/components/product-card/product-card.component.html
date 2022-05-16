@@ -12,6 +12,9 @@
     <p *ngIf="product?.price" class="price margin-bottom">
       <span class="semi-bold">מחיר: </span>
       {{ product?.price }}₪
+      <span title="קבוצה גדולה: 20+ משתתפים" *ngIf="product?.groupPrice"
+        >(לקבוצות<span class="green">*</span>: {{ product?.groupPrice }}₪)
+      </span>
     </p>
   </div>
 </div>

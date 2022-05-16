@@ -8,6 +8,7 @@ export class Product extends Base {
   id!: string;
   name!: string;
   price!: number;
+  groupPrice?: number;
   duration?: number; // in minutes
   dimensions?: string;
   description?: string;
@@ -34,7 +35,7 @@ export class Product extends Base {
     return assetUrl(
       `products/${this.key}/${this.coverImage || this.media[0]}`,
       'image',
-      'h_300'
+      'h_500'
     );
   }
 }

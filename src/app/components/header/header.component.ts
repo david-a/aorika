@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { isMobile } from 'src/app/utils/domUtils';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   scrolledHeight = 50;
   height!: string;
   logoHeight!: string;
+  isMobile = isMobile;
   constructor() {}
 
   ngOnInit() {

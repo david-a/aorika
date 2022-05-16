@@ -22,6 +22,10 @@
 
       .nav-link {
         padding: 10px 20px;
+
+        @include v.xs-screen {
+          padding: 10px;
+        }
       }
     }
   }
