@@ -17,7 +17,3 @@ static_sites:
       - path: /
     source_dir: /
     dockerfile_path: Dockerfile
-    envs:
-      - key: SCULLY_PUPPETEER_EXECUTABLE_PATH
-        scope: RUN_TIME
-        value: /usr/bin/chromium-browser
