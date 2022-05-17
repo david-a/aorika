@@ -12,4 +12,7 @@ export const config: ScullyConfig = {
     ...Object.keys(PRODUCTS).map((productKey) => `/product/${productKey}`),
     ...Object.keys(WORKSHOPS).map((workshopKey) => `/workshop/${workshopKey}`),
   ],
+  puppeteerLaunchOptions: {
+    args: ['--no-sandbox', '--disable-setuid--sandbox'],
+  },
 };
