@@ -16,7 +16,7 @@ RUN  apt-get update \
 
 WORKDIR /usr/src/aorika
 COPY package.json yarn.lock ./
-RUN yarn
+RUN yarn install --network-timeout 100000
 
 COPY . .
 RUN yarn build_prod_scully
