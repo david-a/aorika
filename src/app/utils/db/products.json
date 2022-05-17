@@ -34,7 +34,12 @@
     "dimensions": "רוחב: 60 ס״מ | עומק: 14 ס״מ | גובה: 32 ס״מ",
     "description": "מדף לקפה (אבל לא רק:)",
     "coverImage": "barista.cutout1.png",
-    "media": ["barista.jpg", "barista_00001.jpg"],
+    "media": [
+      "barista.jpg",
+      "barista_00001.jpg",
+      "barista_00005.jpg",
+      "barista_00006.jpg"
+    ],
     "tags": {
       "catalog": true,
       "homepage": true
@@ -228,19 +233,17 @@
   },
 
   "alef": {
-    "name": "אָלֶף",
+    "name": "אוֹרֵן",
     "hidden": {
       "price": 45,
-      "groupPrice": 35
+      "groupPrice": 35,
+      "media": ["alef_00002.JPG", "alef_00003.JPG", "alef_00004.JPG"]
     },
     "dimensions": "רוחב: 30 ס״מ | עומק: 2 ס״מ | גובה: 14 ס״מ",
     "description": "מתלה צבעוני",
     "coverImage": "alef.cutout.png",
     "media": [
       "alef_00001.JPG",
-      "alef_00002.JPG",
-      "alef_00003.JPG",
-      "alef_00004.JPG",
       "alef_00005.JPG",
       "alef_00006.JPG",
       "alef_00007.JPG",
@@ -254,7 +257,7 @@
   },
 
   "beit": {
-    "name": "בֵּית",
+    "name": "בְּרוֹשׁ",
     "hidden": {
       "price": 65,
       "groupPrice": 55
@@ -277,7 +280,7 @@
   },
 
   "gimel": {
-    "name": "גִּימֶל",
+    "name": "גּוֹמֵא",
     "hidden": {
       "price": 65,
       "groupPrice": 55
@@ -302,7 +305,7 @@
   },
 
   "dalet": {
-    "name": "דָּלֶת",
+    "name": "דֶּקֶל",
     "hidden": {
       "price": 45,
       "groupPrice": 35
@@ -310,7 +313,7 @@
     "dimensions": "רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 14 ס״מ",
     "description": "מדפון עם מתלים.",
     "coverImage": "dalet.cutout2.png",
-    "media": ["dalet_00001.JPG"],
+    "media": ["dalet_00001.JPG", "dalet_00002.JPG", "dalet_00003.JPG"],
     "tags": {
       "catalog": false,
       "homepage": false,
@@ -319,7 +322,7 @@
   },
 
   "hey": {
-    "name": "הֵא",
+    "name": "הֲדַס",
     "hidden": {
       "price": 75,
       "groupPrice": 65,
@@ -329,6 +332,40 @@
     "description": "מיני אדנית (כולל אדמה ופרחים).",
     "coverImage": "hey_00001.jpg",
     "media": ["hey.jpg"],
+    "tags": {
+      "catalog": false,
+      "homepage": false,
+      "groups": true
+    }
+  },
+
+  "vav": {
+    "name": "וָנִיל",
+    "hidden": {
+      "price": 60,
+      "groupPrice": 50
+    },
+    "dimensions": "רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 13 ס״מ",
+    "description": "מתלה עם לוח מודעות חוטים.",
+    "coverImage": "vav.cutout.png",
+    "media": ["vav.jpeg"],
+    "tags": {
+      "catalog": false,
+      "homepage": false,
+      "groups": true
+    }
+  },
+
+  "zain": {
+    "name": "זְעַפְרָן",
+    "hidden": {
+      "price": 60,
+      "groupPrice": 50
+    },
+    "dimensions": "רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 13 ס״מ",
+    "description": "קוביות מילים צבעוניות.",
+    "coverImage": "zain.jpg",
+    "media": ["zain.jpg", "zain_00002.jpg", "zain_00003.jpg"],
     "tags": {
       "catalog": false,
       "homepage": false,

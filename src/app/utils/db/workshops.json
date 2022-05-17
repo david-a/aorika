@@ -91,5 +91,23 @@
       "gallery": true,
       "homepage": true
     }
+  },
+  "group_20220215_001": {
+    "date": "2022-02-15",
+    "description": "סדנה קבוצתית - הבית הקהילתי בית שאן",
+    "products": ["dalet"],
+    "coverImage": "20220215_group1_00001.jpg",
+    "media": [
+      "https://www.youtube.com/embed/LLBAwtXFods",
+      "20220215_group1_00002.jpg",
+      "20220215_group1_00003.jpg",
+      "20220215_group1_00004.jpg",
+      "20220215_group1_00005.jpg"
+    ],
+    "tags": {
+      "gallery": true,
+      "homepage": true,
+      "groups": true
+    }
   }
 }
