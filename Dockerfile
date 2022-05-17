@@ -14,9 +14,11 @@ RUN  apt-get update \
      && wget --quiet https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -O /usr/sbin/wait-for-it.sh \
      && chmod +x /usr/sbin/wait-for-it.sh
 
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+
 WORKDIR /usr/src/aorika
 COPY package.json yarn.lock ./
-RUN yarn install --network-timeout 100000
+RUN yarn install 
 
 COPY . .
 RUN yarn build_prod_scully
