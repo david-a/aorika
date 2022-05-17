@@ -1,0 +1,19 @@
+domains:
+  - domain: aorika.co.il
+    type: PRIMARY
+  - domain: www.aorika.co.il
+    type: ALIAS
+name: aorika
+region: fra
+static_sites:
+  - catchall_document: index.html
+    github:
+      branch: master
+      deploy_on_push: true
+      repo: david-a/aorika
+    name: aorika
+    output_dir: /usr/src/aorika/dist/scully
+    routes:
+      - path: /
+    source_dir: /
+    dockerfile_path: Dockerfile
