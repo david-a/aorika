@@ -1,9 +1,10 @@
 import { Indexable } from '../interfaces/Indexable';
 import { assetUrl } from '../pipes/Asset.pipe';
-import { PRODUCTS } from '../utils/db/products';
+// import { PRODUCTS } from '../utils/db/products';
+import PRODUCTS_ from '../utils/db/products.json';
+const PRODUCTS = PRODUCTS_ as Indexable;
 import { isPhoto } from '../utils/stringUtils';
 import { Base } from './Base';
-
 export class Workshop extends Base {
   key!: string;
   id!: string;
@@ -13,6 +14,11 @@ export class Workshop extends Base {
   coverImage?: string;
   media!: string[];
   tags?: Indexable;
+
+  constructor(obj: any) {
+    super(obj);
+    Object.assign(this, obj);
+  }
 
   get type() {
     return 'workshop';

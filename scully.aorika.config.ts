@@ -1,17 +1,15 @@
 import { ScullyConfig } from '@scullyio/scully';
 import '@scullyio/scully-plugin-puppeteer';
-import './scully/plugins/contentPlugin';
-
-/** this loads the default render plugin, remove when switching to something else. */
+const PRODUCTS = require('./src/app/utils/db/products.json');
+const WORKSHOPS = require('./src/app/utils/db/workshops.json');
 
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'aorika',
-  spsModulePath: 'YOUR OWN MODULE PATH HERE',
-  outDir: './dist/static',
-  routes: {
-    '/:slug': {
-      type: 'content',
-    },
-  },
+  outDir: './dist/scully',
+  routes: {},
+  extraRoutes: [
+    ...Object.keys(PRODUCTS).map((productKey) => `/product/${productKey}`),
+    ...Object.keys(WORKSHOPS).map((workshopKey) => `/workshop/${workshopKey}`),
+  ],
 };

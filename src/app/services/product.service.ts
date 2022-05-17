@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Indexable } from '../interfaces/Indexable';
 import { Product } from '../models/Product.model';
-import { PRODUCTS } from '../utils/db/products';
+// import * as PRODUCTS from '../utils/db/products.json';
+import PRODUCTS from '../utils/db/products.json';
+
 import { BaseService } from './base.service';
 
 @Injectable({
@@ -8,7 +11,7 @@ import { BaseService } from './base.service';
 })
 export class ProductService extends BaseService<Product> {
   constructor() {
-    super(PRODUCTS, (obj: any) => new Product(obj));
+    super(PRODUCTS as Indexable, (obj: any) => new Product(obj));
   }
 
   getProductsByKeys = this.getItemsByKeys;

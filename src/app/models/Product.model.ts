@@ -16,6 +16,11 @@ export class Product extends Base {
   media!: string[];
   tags?: Indexable;
 
+  constructor(obj: any) {
+    super(obj);
+    Object.assign(this, obj);
+  }
+
   get type() {
     return 'product';
   }
