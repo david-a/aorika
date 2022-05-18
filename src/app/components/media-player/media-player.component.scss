@@ -73,6 +73,12 @@
     grid-row: 1 / 3;
     min-height: 60vh;
 
+    &:active {
+      img {
+        object-fit: contain;
+      }
+    }
+
     @include v.xs-screen {
       grid-column: auto;
       grid-row: auto;

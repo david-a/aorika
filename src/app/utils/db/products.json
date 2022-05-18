@@ -173,7 +173,14 @@
     "dimensions": "רוחב: 100 ס״מ | עומק: 20 ס״מ | גובה: 89 ס״מ",
     "description": "קונסולת מגירות גבוהה.",
     "coverImage": "sufuni.cutout.png",
-    "media": ["shufuni.jpg"],
+    "media": [
+      "shufuni_00001.jpg",
+      "shufuni_00002.jpg",
+      "shufuni_00003.jpg",
+      "shufuni_00004.jpg",
+      "shufuni_00005.jpg",
+      "shufuni.jpg"
+    ],
     "tags": {
       "catalog": true,
       "homepage": true
@@ -366,6 +373,48 @@
     "description": "קוביות מילים צבעוניות.",
     "coverImage": "zain.jpg",
     "media": ["zain.jpg", "zain_00002.jpg", "zain_00003.jpg"],
+    "tags": {
+      "catalog": false,
+      "homepage": false,
+      "groups": true
+    }
+  },
+
+  "het": {
+    "name": "חָרוּב",
+    "hidden": {
+      "price": 60,
+      "groupPrice": 50,
+      "media": ["het_00002.JPG"]
+    },
+    "dimensions": "רוחב: 18 ס״מ | עומק: 11 ס״מ | גובה: 40 ס״מ",
+    "description": "שלט כניסה מלבלב עם/בלי מתלים.",
+    "coverImage": "het.cutout2.png",
+    "media": [
+      "het_00003.JPG",
+      "het_00004.JPG",
+      "het_00005.JPG",
+      "het_00006.JPG",
+      "het_00001.JPG"
+    ],
+    "tags": {
+      "catalog": false,
+      "homepage": false,
+      "groups": true
+    }
+  },
+
+  "tet": {
+    "name": "טִימִין",
+    "hidden": {
+      "price": 60,
+      "groupPrice": 50,
+      "media": ["tet_00001.JPG"]
+    },
+    "dimensions": "רוחב: 20 ס״מ | עומק: 11 ס״מ | גובה: 9 ס״מ",
+    "description": "מעמד לכלי כתיבה / סכו\"ם / יו ניים איט.",
+    "coverImage": "tet.cutout.png",
+    "media": ["tet_00004.JPG", "tet_00002.JPG", "tet_00003.JPG"],
     "tags": {
       "catalog": false,
       "homepage": false,
