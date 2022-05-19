@@ -170,14 +170,16 @@
     "name": "שׁוּפוּנִי",
     "price": 750,
     "duration": 360,
+    "hidden": {
+      "media": ["shufuni_00002.jpg"]
+    },
     "dimensions": "רוחב: 100 ס״מ | עומק: 20 ס״מ | גובה: 89 ס״מ",
     "description": "קונסולת מגירות גבוהה.",
     "coverImage": "sufuni.cutout.png",
     "media": [
-      "shufuni_00001.jpg",
-      "shufuni_00002.jpg",
-      "shufuni_00003.jpg",
       "shufuni_00004.jpg",
+      "shufuni_00001.jpg",
+      "shufuni_00003.jpg",
       "shufuni_00005.jpg",
       "shufuni.jpg"
     ],
