@@ -6,7 +6,7 @@
     "dimensions": "רוחב: 70 ס״מ | עומק: 20 ס״מ | גובה: 38 ס״מ",
     "description": "מדף כוורת עם מתלים",
     "coverImage": "maamool.cutout.png",
-    "media": ["maamool.jpg"],
+    "media": ["maamool.jpg", "maamool_00001.JPG", "maamool_00002.JPG"],
     "tags": {
       "catalog": true,
       "homepage": true
@@ -106,7 +106,13 @@
     "dimensions": "רוחב: 60 ס״מ | עומק: 40 ס״מ | גובה: 40 ס״מ",
     "description": "ארגז על גלגלים עם מכסה מרופד",
     "coverImage": "kabaryolet.jpg",
-    "media": ["kabaryolet.jpg", "kabaryolet_00001.jpg", "kabaryolet_00002.jpg"],
+    "media": [
+      "kabaryolet.jpg",
+      "kabaryolet_00001.jpg",
+      "kabaryolet_00002.jpg",
+      "kabaryolet_00003.jpg",
+      "kabaryolet_00004.jpg"
+    ],
     "tags": {
       "catalog": true,
       "homepage": true
@@ -180,7 +186,12 @@
       "shufuni_00004.jpg",
       "shufuni_00001.jpg",
       "shufuni_00003.jpg",
+      "shufuni_00008.jpg",
+      "shufuni_00009.jpg",
       "shufuni_00005.jpg",
+      "shufuni_00006.jpg",
+      "shufuni_00007.jpg",
+      "shufuni_00010.jpg",
       "shufuni.jpg"
     ],
     "tags": {
@@ -221,7 +232,12 @@
     "duration": 240,
     "description": "שלישיית מדפים מדורגת",
     "coverImage": "trifonas.cutout.png",
-    "media": ["trifonas.jpg"],
+    "media": [
+      "trifonas.jpg",
+      "trifonas_00001.JPG",
+      "trifonas_00002.JPG",
+      "trifonas_00003.JPG"
+    ],
     "tags": {
       "catalog": true
     }
@@ -249,7 +265,7 @@
       "media": ["alef_00002.JPG", "alef_00003.JPG", "alef_00004.JPG"]
     },
     "dimensions": "רוחב: 30 ס״מ | עומק: 2 ס״מ | גובה: 14 ס״מ",
-    "description": "מתלה צבעוני",
+    "description": "מתלה צבעוני.",
     "coverImage": "alef.cutout.png",
     "media": [
       "alef_00001.JPG",
@@ -290,6 +306,7 @@
 
   "gimel": {
     "name": "גּוֹמֵא",
+    "price": 55,
     "hidden": {
       "price": 65,
       "groupPrice": 55
@@ -332,6 +349,7 @@
 
   "hey": {
     "name": "הֲדַס",
+    "price": 65,
     "hidden": {
       "price": 75,
       "groupPrice": 65,

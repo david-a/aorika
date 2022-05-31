@@ -1,15 +1,33 @@
 {
-  "20200630_001": {
-    "date": "2020-06-30",
-    "description": "צוות הגיל הרך מעלה גלבוע",
-    "products": ["kabaryolet"],
-    "coverImage": "5.jpg",
-    "media": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
+  "20220527_001": {
+    "date": "2022-05-27",
+    "description": "האחות והאחים לבית זיו",
+    "products": ["shufuni", "kabaryolet", "maamool", "trifonas"],
+    "coverImage": "20220527_ziv_00002.JPG",
+    "media": [
+      "https://www.youtube.com/embed/bNS6qjrvirY",
+      "20220527_ziv_00001.JPG",
+      "20220527_ziv_00002.JPG",
+      "20220527_ziv_00003.JPG",
+      "20220527_ziv_00004.JPG",
+      "20220527_ziv_00005.JPG",
+      "20220527_ziv_00006.JPG",
+      "20220527_ziv_00007.JPG",
+      "20220527_ziv_00009.JPG",
+      "20220527_ziv_00010.JPG",
+      "20220527_ziv_00011.JPG",
+      "20220527_ziv_00013.JPG",
+      "20220527_ziv_00014.JPG",
+      "20220527_ziv_00015.JPG",
+      "20220527_ziv_00016.JPG",
+      "20220527_ziv_00017.JPG"
+    ],
     "tags": {
       "gallery": true,
       "homepage": true
     }
   },
+
   "20220422_001": {
     "date": "2022-04-22",
     "description": "השופוני של רעות ומתי",
@@ -32,6 +50,24 @@
     "tags": {
       "gallery": true,
       "homepage": true
+    }
+  },
+  "group_20220215_001": {
+    "date": "2022-02-15",
+    "description": "סדנה קבוצתית - הבית הקהילתי בית שאן",
+    "products": ["dalet"],
+    "coverImage": "20220215_group1_00001.jpg",
+    "media": [
+      "https://www.youtube.com/embed/LLBAwtXFods",
+      "20220215_group1_00002.jpg",
+      "20220215_group1_00003.jpg",
+      "20220215_group1_00004.jpg",
+      "20220215_group1_00005.jpg"
+    ],
+    "tags": {
+      "gallery": true,
+      "homepage": true,
+      "groups": true
     }
   },
   "20211015_001": {
@@ -92,22 +128,15 @@
       "homepage": true
     }
   },
-  "group_20220215_001": {
-    "date": "2022-02-15",
-    "description": "סדנה קבוצתית - הבית הקהילתי בית שאן",
-    "products": ["dalet"],
-    "coverImage": "20220215_group1_00001.jpg",
-    "media": [
-      "https://www.youtube.com/embed/LLBAwtXFods",
-      "20220215_group1_00002.jpg",
-      "20220215_group1_00003.jpg",
-      "20220215_group1_00004.jpg",
-      "20220215_group1_00005.jpg"
-    ],
+  "20200630_001": {
+    "date": "2020-06-30",
+    "description": "צוות הגיל הרך מעלה גלבוע",
+    "products": ["kabaryolet"],
+    "coverImage": "5.jpg",
+    "media": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
     "tags": {
       "gallery": true,
-      "homepage": true,
-      "groups": true
+      "homepage": true
     }
   }
 }
