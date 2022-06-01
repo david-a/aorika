@@ -349,7 +349,6 @@
 
   "hey": {
     "name": "הֲדַס",
-    "price": 65,
     "hidden": {
       "price": 75,
       "groupPrice": 65,
