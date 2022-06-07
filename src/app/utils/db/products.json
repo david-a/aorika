@@ -306,7 +306,6 @@
 
   "gimel": {
     "name": "גּוֹמֵא",
-    "price": 55,
     "hidden": {
       "price": 65,
       "groupPrice": 55
