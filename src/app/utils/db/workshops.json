@@ -1,4 +1,26 @@
 {
+  "20220608_001": {
+    "date": "2022-06-08",
+    "description": "המַעמוּל של רעות ואיתן",
+    "products": ["maamool"],
+    "coverImage": "20220608_rubinstein_00009.jpg",
+    "media": [
+      "https://www.youtube.com/embed/dghs8mvTueQ",
+      "20220608_rubinstein_00001.jpg",
+      "20220608_rubinstein_00002.jpg",
+      "20220608_rubinstein_00003.jpg",
+      "20220608_rubinstein_00004.jpg",
+      "20220608_rubinstein_00005.jpg",
+      "20220608_rubinstein_00006.jpg",
+      "20220608_rubinstein_00007.jpg",
+      "20220608_rubinstein_00009.jpg"
+    ],
+    "tags": {
+      "gallery": true,
+      "homepage": true
+    }
+  },
+
   "20220527_001": {
     "date": "2022-05-27",
     "description": "האחות והאחים לבית זיו",
