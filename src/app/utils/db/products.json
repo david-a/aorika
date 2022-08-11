@@ -135,7 +135,7 @@
 
   "shaiba": {
     "name": "שַׁיְיבָּה",
-    "price": 180,
+    "price": 250,
     "duration": 120,
     "description": "שרפרפון",
     "coverImage": "shaiba.cutout.png",
@@ -161,7 +161,7 @@
 
   "single": {
     "name": "סִינְגֶל",
-    "price": 250,
+    "price": 280,
     "duration": 180,
     "dimensions": "רוחב: 60 ס״מ | עומק: 14 ס״מ | גובה: 18 ס״מ",
     "description": "מדף בודד עם מתלים",
