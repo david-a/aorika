@@ -373,7 +373,7 @@
     "dimensions": "רוחב: 30 ס״מ | עומק: 4 ס״מ | גובה: 13 ס״מ",
     "description": "מתלה עם לוח מודעות חוטים.",
     "coverImage": "vav.cutout.png",
-    "media": ["vav.jpeg"],
+    "media": ["vav.jpeg", "vav_00001.jpg"],
     "tags": {
       "catalog": false,
       "homepage": false,
