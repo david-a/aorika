@@ -16,6 +16,7 @@ import { AssetPipe } from './pipes/Asset.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 import { GroupsPageComponent } from './components/groups-page/groups-page.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { AccessibilityPageComponent } from './components/accessibility-page/accessibility-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     AssetPipe,
     FooterComponent,
     GroupsPageComponent,
+    AccessibilityPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ScullyLibModule],
   providers: [],

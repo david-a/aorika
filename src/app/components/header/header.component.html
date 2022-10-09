@@ -15,14 +15,29 @@
         routerLink="/catalog"
         [class.selected]="isSelected('catalog')"
         class="nav-link"
+        alt="Link to Catalog page"
+        title="קטלוג המוצרים"
+        aria-label="קטלוג המוצרים"
+        aria-describedby="קישור לקטלוג המוצרים של אאוריקה"
         >הקטלוג</a
       ><a
         href="/gallery"
         [class.selected]="isSelected('gallery')"
         class="nav-link"
+        alt="Link to Gallery page"
+        title="גלרית התמונות"
+        aria-label="גלרית התמונות"
+        aria-describedby="קישור לגלרית התמונות של אאוריקה"
         >גלריה</a
       >
-      <a href="/groups" [class.selected]="isSelected('groups')" class="nav-link"
+      <a
+        href="/groups"
+        [class.selected]="isSelected('groups')"
+        class="nav-link"
+        alt="Link to Gallery page"
+        title="קטלוג הסדנאות הקבוצתיות"
+        aria-label="קטלוג הסדנאות הקבוצתיות"
+        aria-describedby="קישור לקטלוג הסדנאות הקבוצתיות של אאוריקה"
         ><span *ngIf="!isMobile()">סדנאות ל</span>קבוצות</a
       >
     </nav>

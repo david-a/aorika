@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AccessibilityPageComponent } from './components/accessibility-page/accessibility-page.component';
 import { CatalogPageComponent } from './components/catalog-page/catalog-page.component';
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { GroupsPageComponent } from './components/groups-page/groups-page.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'product/:id', component: MediaPageComponent },
   { path: 'workshop/:id', component: MediaPageComponent },
   { path: 'contact', redirectTo: '/#contact' },
+  { path: 'accessibility', component: AccessibilityPageComponent },
   // { path: '**', component: PageNotFoundComponent },
 ];
 
