@@ -2,6 +2,7 @@
 
 .workshop-card {
   cursor: pointer;
+  display: block;
   width: 300px;
   background-color: v.$or-white;
   transition: outline 0.2s;

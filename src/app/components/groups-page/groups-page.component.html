@@ -9,7 +9,16 @@
       הגילאים.<br />
       הנחות לקבוצות גדולות<span class="green">*</span> (20+ משתתפים). <br />ניתן
       להוסיף מוצרים מרשימה זו לסדנה רגילה ואף להזמין קיטים בלבד ללא הדרכה.
-      <br />להזמנות ופרטים נוספים <a (click)="contactMe()">צרו קשר כאן</a>.
+      <br />להזמנות ופרטים נוספים
+      <a
+        (click)="contactMe($event)"
+        href="#"
+        alt="Link to contact form"
+        title="קישור לטופס יצירת קשר"
+        aria-label="יצירת קשר"
+        aria-describedby="קישור לטופס יצירת קשר"
+        >צרו קשר כאן</a
+      >.
     </p>
     <div class="catalog-wrapper sample-products">
       <app-product-card
@@ -20,7 +29,16 @@
     </div>
     <h4 class="handwriting centered-text margin-bottom">
       לא מצאתם משהו מתאים?
-      <a class="handwriting" (click)="contactMe()">דברו איתי</a>
+      <a
+        class="handwriting"
+        (click)="contactMe($event)"
+        href="#"
+        alt="Link to contact form"
+        title="קישור לטופס יצירת קשר"
+        aria-label="יצירת קשר"
+        aria-describedby="קישור לטופס יצירת קשר"
+        >דברו איתי</a
+      >
       ונחשוב על משהו ביחד!
     </h4>
   </div>

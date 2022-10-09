@@ -34,7 +34,8 @@ export class CatalogPageComponent implements OnInit {
     return this.productService.getProducts(undefined, ['catalog']);
   }
 
-  contactMe() {
+  contactMe(event: any) {
+    event.preventDefault();
     navigateNonSmooth(this.router, '/');
     setTimeout(() => {
       navigateToContactFormAndMessage(

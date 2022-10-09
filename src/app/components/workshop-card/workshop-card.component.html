@@ -1,4 +1,4 @@
-<div class="workshop-card" (click)="onClick()">
+<a class="workshop-card" (click)="onClick($event)" href="#">
   <div class="workshop-image">
     <img [src]="workshop.coverImageUrl" />
   </div>
@@ -9,4 +9,4 @@
       >{{ workshop.productNames?.join(", ") }}
     </p>
   </div>
-</div>
+</a>

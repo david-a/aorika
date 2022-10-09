@@ -140,6 +140,10 @@ a:active:not(.disabled) span {
   color: darken(v.$or-green, 40%);
 }
 
+a.accessibility-anchor {
+  opacity: 0;
+}
+
 img.link-icon {
   width: 2em !important;
 }

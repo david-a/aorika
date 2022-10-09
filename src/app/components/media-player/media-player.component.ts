@@ -68,8 +68,13 @@ export class MediaPlayerComponent implements OnInit {
             (coverImageIndexInMedia >= 0 && coverImageIndexInMedia) || 0
           ];
 
-        this.item &&
+        if (this.item) {
           (document.getElementById('main-background-video') as any)?.pause();
+          setTimeout(() => {
+            this.focusOnAccesibilityAnchor();
+          }, 100);
+        }
+
         this.cdr.markForCheck();
       });
   }
@@ -82,17 +87,27 @@ export class MediaPlayerComponent implements OnInit {
 
   @HostListener('document:keyup.escape', ['$event'])
   escHandler(event: KeyboardEvent) {
-    this.overlay && this.onClose();
+    this.overlay && this.onClose(true);
   }
 
-  onClose() {
+  focusOnAccesibilityAnchor() {
+    this.infoItemRef?.nativeElement
+      .querySelector('.accessibility-anchor')
+      .focus();
+  }
+
+  onClose(keyboard = false) {
     if (!isMobile()) {
       (document.getElementById('main-background-video') as any)?.play();
     }
     this.mediaPlayerService.emitMediaPlayerItem(null);
+    if (keyboard) {
+      document.getElementById('aorika-logo-anchor')?.focus();
+    }
   }
 
   onClick(url: string, event: any) {
+    event.preventDefault();
     event.stopPropagation();
     if (this.selected !== url) {
       this.selected = url;
@@ -159,9 +174,11 @@ export class MediaPlayerComponent implements OnInit {
       : 'הנה כמה תמונות מדליקות מהסדנה באאוריקה';
   }
 
-  copyUrl() {
+  copyUrl(event: any) {
+    event.preventDefault();
     if (this.shareUrl && copyMessage(this.shareUrl)) {
       this.showClipboardCopied = true;
+      this.focusOnAccesibilityAnchor();
       setTimeout(() => {
         this.showClipboardCopied = false;
         this.cdr.markForCheck();

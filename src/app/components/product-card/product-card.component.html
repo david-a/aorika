@@ -1,4 +1,4 @@
-<div class="product-card" (click)="onClick()">
+<a class="product-card" (click)="onClick($event)" href="#">
   <div class="product-image">
     <img [src]="product.coverImageUrl" />
   </div>
@@ -17,4 +17,4 @@
       </span>
     </p>
   </div>
-</div>
+</a>

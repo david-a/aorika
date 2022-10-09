@@ -34,7 +34,8 @@ export class GroupsPageComponent implements OnInit {
     return this.productService.getProducts(undefined, ['groups']);
   }
 
-  contactMe() {
+  contactMe(event: any) {
+    event.preventDefault();
     navigateNonSmooth(this.router, '/');
     setTimeout(() => {
       navigateToContactFormAndMessage(

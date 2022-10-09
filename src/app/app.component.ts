@@ -36,5 +36,11 @@ export class AppComponent {
       },
       { name: 'robots', content: DEFAULT_META_DATA.robots },
     ]);
+    document.onkeydown = this.onKeyDown;
+  }
+
+  onKeyDown(event: any) {
+    if (event.keyCode == 72 && event.altKey)
+      document.getElementById('aorika-logo-anchor')?.focus();
   }
 }

@@ -13,7 +13,16 @@
     </div>
     <h4 class="handwriting centered-text margin-bottom">
       לא מצאתם את מה שרציתם?
-      <a class="handwriting" (click)="contactMe()">דברו איתי</a>
+      <a
+        class="handwriting"
+        (click)="contactMe($event)"
+        href="#"
+        alt="Link to contact form"
+        title="קישור לטופס יצירת קשר"
+        aria-label="יצירת קשר"
+        aria-describedby="קישור לטופס יצירת קשר"
+        >דברו איתי</a
+      >
       ונחשוב על משהו ביחד!
     </h4>
   </div>

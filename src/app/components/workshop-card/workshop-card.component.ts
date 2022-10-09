@@ -13,7 +13,8 @@ export class WorkshopCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onClick() {
+  onClick(event: any) {
+    event.preventDefault();
     this.mediaPlayerService.emitMediaPlayerItem({
       item: this.workshop,
       overlay: true,

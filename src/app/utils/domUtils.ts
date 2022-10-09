@@ -24,7 +24,7 @@ export const navigateNonSmooth = (router: any, path: string = '/') => {
     htmlElement.style.scrollBehavior = 'initial';
   }
   router.navigateByUrl(path, {
-    skipLocationChange: true,
+    // skipLocationChange: true, // if enabled causes the url (and selected menu link) to stay the same.
   });
   if (htmlElement) {
     htmlElement.style.scrollBehavior = 'smooth';

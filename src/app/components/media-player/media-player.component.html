@@ -12,6 +12,11 @@
       <p class="description margin-bottom">
         {{ item.description }}
       </p>
+      <a
+        class="accessibility-anchor"
+        href="#"
+        (click)="($event.preventDefault)"
+      ></a>
       <p *ngIf="item.products" class="products margin-bottom">
         <span class="semi-bold">מוצרים: </span>
         <ng-container *ngFor="let product of item.productNames; index as i">
@@ -45,11 +50,14 @@
           [href]="
             'https://twitter.com/share?url=' + shareUrl + '&text=' + shareText
           "
+          aria-label="שיתוף בטוויטר"
+          aria-describedby="לינק לשיתוף בטוויטר"
+          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
         >
           <img
             class="link-icon margin-forward-small"
             alt="Share on Twitter"
-            title="Share on Twitter"
+            title="שיתוף בטוויטר"
             [src]="'twitter.png' | asset: 'icon'"
           />
         </a>
@@ -58,11 +66,14 @@
         <a
           target="_blank"
           [href]="'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl"
+          aria-label="שיתוף בפייסבוק"
+          aria-describedby="לינק לשיתוף בפייסבוק"
+          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
         >
           <img
             class="link-icon margin-forward-small"
             alt="Share on Facebook"
-            title="Share on Facebook"
+            title="שיתוף בפייסבוק"
             [src]="'facebook.png' | asset: 'icon'"
           />
         </a>
@@ -75,11 +86,14 @@
             ' %0D%0A%0D%0A' +
             shareUrl
           "
+          aria-label="שיתוף בוואטסאפ"
+          aria-describedby="לינק לשיתוף בוואטסאפ"
+          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
         >
           <img
             class="link-icon margin-forward-small"
             alt="Share on Whatsapp"
-            title="Share on Whatsapp"
+            title="שיתוף בוואטסאפ"
             [src]="'whatsapp.png' | asset: 'icon'"
           />
         </a>
@@ -89,20 +103,29 @@
           [href]="
             'https://t.me/share/url?url=' + shareUrl + '&text=' + shareText
           "
+          aria-label="שיתוף בטלגרם"
+          aria-describedby="לינק לשיתוף בטלגרם"
+          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
         >
           <img
             class="link-icon margin-forward-small"
             alt="Share on Telegram"
-            title="Share on Telegram"
+            title="שיתוף בטלגרם"
             [src]="'telegram.png' | asset: 'icon'"
           />
         </a>
 
-        <a target="_blank" (click)="copyUrl()">
+        <a
+          target="_blank"
+          (click)="copyUrl($event)"
+          href="#"
+          aria-label="העתקה ללוח"
+          aria-describedby="לינק להעתקה ללוח"
+        >
           <img
             class="link-icon margin-forward-small"
             alt="Copy to Clipboard"
-            title="Copy to Clipboard"
+            title="העתקה ללוח"
             [src]="'copy.png' | asset: 'icon'"
           />
         </a>
@@ -110,18 +133,26 @@
         <span *ngIf="showClipboardCopied">הקישור הועתק ללוח!</span>
       </div>
       <div class="action-area">
-        <button *ngIf="item.type === 'product'" (click)="orderNow()">
+        <button
+          *ngIf="item.type === 'product'"
+          (click)="orderNow()"
+          alt="Link to contact form"
+          title="קישור לטופס יצירת קשר"
+          aria-label="יצירת קשר"
+          aria-describedby="קישור לטופס יצירת קשר"
+        >
           רוצה כזה!
         </button>
       </div>
     </div>
-    <div
+    <a
       *ngFor="let mediaItemUrl of item.allMediaUrls; index as i"
       class="grid-item"
       [class.wide]="shouldBeWide(mediaItemUrl, i)"
       [class.tall]="shouldBeTall(mediaItemUrl, i)"
       [class.selected]="isSelected(mediaItemUrl)"
       (click)="onClick(mediaItemUrl, $event)"
+      href="#"
     >
       <div class="video-container" *ngIf="!isPhoto(mediaItemUrl)">
         <video
@@ -157,6 +188,6 @@
         id="media-player-photo"
         [src]="mediaItemUrl"
       />
-    </div>
+    </a>
   </div>
 </div>

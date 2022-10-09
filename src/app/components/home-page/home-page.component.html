@@ -88,17 +88,40 @@
       <h4 class="handwriting centered-text centered-text margin-bottom">
         אשמח לשמוע כל שאלה, בקשה או הצעה
       </h4>
+      <p *ngIf="submitMessage">{{ submitMessage }}</p>
       <p>
-        תרימו טלפון <a href="tel:0544480886">054-4480886</a>, דברו איתי
+        <span *ngIf="submitMessage" class="margin-forward-small">
+          אפשר גם בטלפון</span
+        ><span *ngIf="!submitMessage" class="margin-forward-small"
+          >תרימו טלפון</span
+        >
+        <a
+          [class.margin-forward-small]="submitMessage"
+          href="tel:0544480886"
+          aria-label="מספר טלפון 0544480886"
+          aria-describedby="מספר טלפון ליצירת קשר - 0544480886"
+          alt="Phone Number - 0544480886"
+          title="מספר טלפון"
+          >054-4480886</a
+        ><span *ngIf="submitMessage" class="margin-forward-small">או</span
+        ><span *ngIf="!submitMessage" class="margin-forward-small"
+          >, דברו איתי</span
+        >
         <a
           target="_blank"
           href="https://api.whatsapp.com/send?phone=972544480886"
+          aria-label="Whatsapp"
+          aria-describedby="קישור ליצירת קשר דרך Whatsapp"
+          alt="Contact us via Whatsapp"
+          title="דברו איתי בוואטסאפ"
+          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
           >בוואטסאפ</a
-        >, או שלחו לי מייל ממש כאן -
+        ><span *ngIf="submitMessage">.</span
+        ><span *ngIf="!submitMessage">, או שלחו לי מייל ממש כאן -</span>
       </p>
-      <div class="submit-message-wrapper">
+      <!-- <div class="submit-message-wrapper">
         <p *ngIf="submitMessage">{{ submitMessage }}</p>
-      </div>
+      </div> -->
       <form
         *ngIf="!submitMessage"
         id="contact-form"
@@ -121,7 +144,13 @@
         ></textarea>
 
         <p *ngIf="submitError">{{ submitError }}</p>
-        <button type="submit" id="my-form-button">שלח</button>
+        <button
+          type="submit"
+          id="my-form-button"
+          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
+        >
+          שלח
+        </button>
         <p id="my-form-status"></p>
       </form>
       <!-- </div> -->
