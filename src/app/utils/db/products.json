@@ -1,8 +1,8 @@
 {
   "maamool": {
     "name": "מַעמוּל",
-    "price": 550,
-    "duration": 240,
+    "price": 650,
+    "duration": 180,
     "dimensions": "רוחב: 70 ס״מ | עומק: 20 ס״מ | גובה: 38 ס״מ",
     "description": "מדף כוורת עם מתלים",
     "coverImage": "maamool.cutout.png",
@@ -16,7 +16,7 @@
   "sahbak": {
     "name": "סַחְבָּק",
     "price": 550,
-    "duration": 210,
+    "duration": 180,
     "dimensions": "רוחב: 40 ס״מ | עומק: 20 ס״מ | גובה: 60 ס״מ",
     "description": "שידת לילה עם מגירה",
     "coverImage": "sahbak.cutout.png",
@@ -30,7 +30,7 @@
   "barista": {
     "name": "בָּרִיסְטָה",
     "price": 550,
-    "duration": 240,
+    "duration": 180,
     "dimensions": "רוחב: 60 ס״מ | עומק: 14 ס״מ | גובה: 32 ס״מ",
     "description": "מדף לקפה (אבל לא רק:)",
     "coverImage": "barista.cutout1.png",
@@ -73,7 +73,7 @@
 
   "kabuk": {
     "name": "קַבּוּק",
-    "price": 850,
+    "price": 240,
     "duration": 360,
     "dimensions": "רוחב: 87 ס״מ | עומק: 40 ס״מ | גובה: 90 ס״מ",
     "description": "מעמד כפול לספרים",
@@ -88,7 +88,7 @@
   "fanan": {
     "name": "פַנָאן",
     "price": 950,
-    "duration": 270,
+    "duration": 240,
     "dimensions": "רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ",
     "description": "ספסל עם מדף",
     "coverImage": "fanan.jpg",
@@ -102,7 +102,7 @@
   "kabaryolet": {
     "name": "קָבַּרְיוֹלֶט",
     "price": 650,
-    "duration": 300,
+    "duration": 240,
     "dimensions": "רוחב: 60 ס״מ | עומק: 40 ס״מ | גובה: 40 ס״מ",
     "description": "ארגז על גלגלים עם מכסה מרופד",
     "coverImage": "kabaryolet.jpg",
@@ -122,7 +122,7 @@
   "layback": {
     "name": "לֵייבָּאק",
     "price": 950,
-    "duration": 300,
+    "duration": 180,
     "dimensions": "רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ",
     "description": "ספסל גינה עם משענת",
     "coverImage": "layback.cutout.png",
@@ -148,7 +148,7 @@
   "sidekick": {
     "name": "סַיידקִיק",
     "price": 550,
-    "duration": 240,
+    "duration": 180,
     "dimensions": "רוחב: 27 ס״מ | עומק: 40 ס״מ | גובה: 57 ס״מ",
     "description": "שולחן קפה מתהפך",
     "coverImage": "sidekick.cutout.png",
@@ -162,7 +162,7 @@
   "single": {
     "name": "סִינְגֶל",
     "price": 320,
-    "duration": 180,
+    "duration": 120,
     "dimensions": "רוחב: 60 ס״מ | עומק: 14 ס״מ | גובה: 18 ס״מ",
     "description": "מדף בודד עם מתלים",
     "coverImage": "single.cutout.png",
@@ -195,15 +195,15 @@
       "shufuni.jpg"
     ],
     "tags": {
-      "catalog": true,
-      "homepage": true
+      "catalog": false,
+      "homepage": false
     }
   },
 
   "spicy": {
     "name": "סְפָּיְיסִי",
-    "price": 550,
-    "duration": 240,
+    "price": 650,
+    "duration": 180,
     "dimensions": "רוחב: 56 ס״מ | עומק: 10 ס״מ | גובה: 33 ס״מ",
     "description": "מדף תבלינים",
     "coverImage": "spicy.jpg",
@@ -229,7 +229,7 @@
   "trifonas": {
     "name": "טְרִיפוֹנָאס",
     "price": 450,
-    "duration": 240,
+    "duration": 180,
     "description": "שלישיית מדפים מדורגת",
     "coverImage": "trifonas.cutout.png",
     "media": [
@@ -245,8 +245,8 @@
 
   "umami": {
     "name": "אוּמָאמִי",
-    "price": 550,
-    "duration": 240,
+    "price": 650,
+    "duration": 180,
     "dimensions": "רוחב: 61 ס״מ | עומק: 14 ס״מ | גובה: 40 ס״מ",
     "description": "יחידת מדפים עם מתלים",
     "coverImage": "umami.jpg",
