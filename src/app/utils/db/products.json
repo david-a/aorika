@@ -87,7 +87,7 @@
 
   "fanan": {
     "name": "פַנָאן",
-    "price": 850,
+    "price": 950,
     "duration": 270,
     "dimensions": "רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ",
     "description": "ספסל עם מדף",
@@ -121,7 +121,7 @@
 
   "layback": {
     "name": "לֵייבָּאק",
-    "price": 850,
+    "price": 950,
     "duration": 300,
     "dimensions": "רוחב: 126 ס״מ | עומק: 72 ס״מ | גובה: 78 ס״מ",
     "description": "ספסל גינה עם משענת",
