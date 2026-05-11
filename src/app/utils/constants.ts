@@ -24,6 +24,15 @@ export const CONTACT_SUCCESS_MESSAGE = 'תודה רבה! אחזור אליך ב�
 
 export const CONTACT_FAILURE_MESSAGE = 'אופס! משהו קרה, נסו לשלוח שוב.';
 
+/** נזרק אחרי לחיצה על הורדת איש קשר (גם כשכבר בדף הבית) */
+export const POST_VCF_CONTACT_ACTIVATED_EVENT = 'aorika-post-vcf-contact';
+
+/** נקבע אחרי לחיצה על הורדת איש קשר; נשמר לכל המפגש בדפדפן */
+export const POST_VCF_CONTACT_SESSION_KEY = 'aorika_post_vcf_contact';
+
+export const POST_VCF_CONTACT_DEFAULT_MESSAGE =
+  'היי אור! נעים להכיר... נשמח להיות בקשר.';
+
 export const DEFAULT_META_DATA = {
   title: 'אאוריקה - סדנאות יצירה בעץ',
   keywords:

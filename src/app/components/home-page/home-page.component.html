@@ -84,12 +84,26 @@
   <div class="narrower content-wrapper-columns">
     <div class="column column-with-text dark-theme contact-card">
       <!-- <div class="sub-column-narrower contact-card"> -->
-      <h2 class="centered-text semi-bold">דברו איתי</h2>
-      <h4 class="handwriting centered-text centered-text margin-bottom">
+      <h2
+        *ngIf="!submitMessage && !postVcfContactUi"
+        class="centered-text semi-bold"
+      >
+        דברו איתי
+      </h2>
+      <h4
+        *ngIf="!submitMessage && !postVcfContactUi"
+        class="handwriting centered-text centered-text margin-bottom"
+      >
         אשמח לשמוע כל שאלה, בקשה או הצעה
       </h4>
+      <h2
+        *ngIf="!submitMessage && postVcfContactUi"
+        class="handwriting centered-text centered-text margin-bottom"
+      >
+        איזה כיף! נעים להכיר ;)
+      </h2>
       <p *ngIf="submitMessage">{{ submitMessage }}</p>
-      <p>
+      <p *ngIf="!postVcfContactUi || submitMessage">
         <span *ngIf="submitMessage" class="margin-forward-small">
           אפשר גם בטלפון</span
         ><span *ngIf="!submitMessage" class="margin-forward-small"
@@ -114,10 +128,17 @@
           aria-describedby="קישור ליצירת קשר דרך Whatsapp"
           alt="Contact us via Whatsapp"
           title="דברו איתי בוואטסאפ"
-          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
+          onclick="
+            return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?');
+          "
           >בוואטסאפ</a
         ><span *ngIf="submitMessage">.</span
         ><span *ngIf="!submitMessage">, או שלחו לי מייל ממש כאן -</span>
+      </p>
+      <p *ngIf="postVcfContactUi && !submitMessage">
+        <span class="margin-forward-small"
+          >אשמח אם תשאירו גם לי את הפרטים שלכם -</span
+        >
       </p>
       <!-- <div class="submit-message-wrapper">
         <p *ngIf="submitMessage">{{ submitMessage }}</p>
@@ -138,16 +159,19 @@
 
         <!-- <label>במה אוכל לעזור?</label> -->
         <textarea
+          #contactMessage
           id="contact-form-message"
           name="message"
-          placeholder="במה אוכל לעזור?"
+          [attr.placeholder]="postVcfContactUi ? '' : 'במה אוכל לעזור?'"
         ></textarea>
 
         <p *ngIf="submitError">{{ submitError }}</p>
         <button
           type="submit"
           id="my-form-button"
-          onclick="return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?')"
+          onclick="
+            return confirm('לינק זה מוביל לאתר חיצוני לאאוריקה, האם להמשיך?');
+          "
         >
           שלח
         </button>
