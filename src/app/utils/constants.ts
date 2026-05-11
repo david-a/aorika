@@ -33,6 +33,10 @@ export const POST_VCF_CONTACT_SESSION_KEY = 'aorika_post_vcf_contact';
 export const POST_VCF_CONTACT_DEFAULT_MESSAGE =
   'היי אור! נעים להכיר... נשמח להיות בקשר.';
 
+export const CONTACT_VCF_HREF = '/assets/contacts/or-avikasis.vcf';
+
+export const CONTACT_VCF_DOWNLOAD_FILENAME = 'or-avikasis-aorika.vcf';
+
 export const DEFAULT_META_DATA = {
   title: 'אאוריקה - סדנאות יצירה בעץ',
   keywords:

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactCardDownloadService } from 'src/app/services/contact-card-download.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public contactCardDownload: ContactCardDownloadService) { }
 
   ngOnInit(): void {
   }

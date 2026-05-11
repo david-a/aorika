@@ -8,4 +8,35 @@
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+
+  .share-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    > a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0;
+    }
+
+    img.link-icon {
+      display: block;
+    }
+  }
+
+  .footer-vcf-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+
+    .footer-vcf-icon {
+      width: 2em;
+      height: 2em;
+      display: block;
+    }
+  }
 }

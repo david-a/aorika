@@ -41,12 +41,12 @@
         ><span *ngIf="!isMobile()">סדנאות ל</span>קבוצות</a
       >
       <a
-        href="/assets/contacts/or-avikasis.vcf"
-        download="or-avikasis-aorika.vcf"
+        [href]="contactCardDownload.vcfHref"
+        [attr.download]="contactCardDownload.vcfDownloadFilename"
         class="nav-link nav-link-contact-download"
         title="הורדת כרטיס איש קשר — אור אבקסיס, אאוריקה"
         aria-label="הורדת איש קשר לאור אבקסיס מאאוריקה"
-        (click)="onContactCardDownloadClick()"
+        (click)="contactCardDownload.onVcfAnchorClick()"
       >
         <svg
           class="contact-nav-icon"

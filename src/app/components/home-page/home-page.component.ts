@@ -10,6 +10,7 @@ import {
 import { environment } from 'src/environments/environment';
 import { Product } from 'src/app/models/Product.model';
 import { Workshop } from 'src/app/models/Workshop.model';
+import { ContactCardDownloadService } from 'src/app/services/contact-card-download.service';
 import { ProductService } from 'src/app/services/product.service';
 import { WorkshopService } from 'src/app/services/workshop.service';
 import {
@@ -51,7 +52,8 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
     private workshopService: WorkshopService,
     private titleService: Title,
     private metaService: Meta,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    public contactCardDownload: ContactCardDownloadService
   ) {}
 
   ngOnInit(): void {

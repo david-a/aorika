@@ -303,4 +303,20 @@ button {
   &:active {
     background-color: darken(v.$or-green, 30%);
   }
+
+  &.secondary {
+    background-color: v.$or-white;
+    color: v.$or-green;
+
+    &:hover,
+    &:focus {
+      background-color: darken(v.$or-white, 5%);
+      color: darken(v.$or-green, 8%);
+    }
+
+    &:active {
+      background-color: darken(v.$or-white, 10%);
+      color: darken(v.$or-green, 12%);
+    }
+  }
 }
