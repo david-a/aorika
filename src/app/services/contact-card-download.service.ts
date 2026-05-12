@@ -51,14 +51,39 @@ export class ContactCardDownloadService {
   }
 
   private scrollHomeToContactSection(): void {
-    const path = window.location.pathname.replace(/\/$/, '') || '/';
-    if (path === '/') {
-      document.getElementById('contact')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+    if (this.isAtHomePath()) {
+      this.scrollContactSectionIntoView();
       return;
     }
-    void this.router.navigate(['/'], { fragment: 'contact' });
+    // Keep `#contact` in the URL, but do not rely on Router anchor scroll alone:
+    // it often runs before the home layout is stable (images, video). Correct
+    // with the same deferred scrollIntoView as on `/`.
+    void this.router.navigate(['/'], { fragment: 'contact' }).then((ok) => {
+      if (!ok) {
+        return;
+      }
+      this.scrollContactAfterHomeNavigation();
+    });
+  }
+
+  private isAtHomePath(): boolean {
+    const path = window.location.pathname.replace(/\/$/, '') || '/';
+    return path === '/';
+  }
+
+  private scrollContactSectionIntoView(): void {
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+
+  /** Run after route activation + next paint so `#contact` exists and layout has settled. */
+  private scrollContactAfterHomeNavigation(): void {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        window.setTimeout(() => this.scrollContactSectionIntoView(), 180);
+      });
+    });
   }
 }
