@@ -1,0 +1,102 @@
+<div
+  class="section green-section lower-than-header"
+  id="mini-workshop-instructions"
+>
+  <div class="narrower mini-workshop-landing-hero">
+    <h2 class="handwriting centered-text margin-bottom-small">
+      סדנה בקטנה - מגנט עץ
+    </h2>
+    <h4 class="centered-text regular margin-bottom">
+      שמחים להציע לכם טעימה קטנה מהסדנאות שלנו :)
+    </h4>
+  </div>
+  <div class="narrower content-wrapper-columns">
+    <div class="column column-with-text dark-theme">
+      <div class="sub-column-narrower">
+        <h3 class="centered-text semi-bold green margin-bottom-small">
+          הוראות הכנה
+        </h3>
+        <ol class="instructions-list small">
+          <li>
+            שייפו את <span class="instruction-em">לוח העץ</span> בעזרת
+            <span class="instruction-em">נייר הליטוש</span>.
+          </li>
+          <li>
+            הסירו את מדבקת ה<span class="instruction-em">שבלונה</span> עם המילה
+            שבחרתם והדביקו אותה על גבי העץ.
+          </li>
+          <li>
+            בעזרת <span class="instruction-em">ספוגית</span> עם מעט
+            <span class="instruction-em">צבע</span> עברו על כל השבלונה עד שאין
+            אזורים שאינם מכוסים בצבע.
+          </li>
+          <li>המתינו מספר דקות והסירו את השבלונה.</li>
+          <li>
+            הסירו את הדבק מעל ה<span class="instruction-em">מגנט</span> והדביקו
+            אותו לצד האחורי של לוח העץ.
+          </li>
+          <li>תהנו מהמגנט החדש שלכם!</li>
+        </ol>
+        <div class="about-visit-card-wrap">
+          <h4 class="handwriting centered-text about-visit-card-hint">
+            שמרו את הטלפון שלי :)
+            <span class="about-visit-card-arrow" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 4v16M6 14l6 6 6-6" />
+              </svg>
+            </span>
+          </h4>
+          <button
+            type="button"
+            class="visit-card-button"
+            title="הורדת כרטיס ביקור (vCard) לאור אבקסיס, אאוריקה"
+            aria-label="הורדת כרטיס ביקור לאור אבקסיס מאאוריקה"
+            (click)="contactCardDownload.triggerDownloadFromButton()"
+          >
+            <svg
+              class="visit-card-button-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="m 8 1 c -1.65625 0 -3 1.34375 -3 3 s 1.34375 3 3 3 s 3 -1.34375 3 -3 s -1.34375 -3 -3 -3 z m -1.5 7 c -2.492188 0 -4.5 2.007812 -4.5 4.5 v 0.5 c 0 1.109375 0.890625 2 2 2 h 6 v -1 h -3 v -4 h 3 v -1.972656 c -0.164062 -0.019532 -0.332031 -0.027344 -0.5 -0.027344 z m 4.5 0 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
+              />
+            </svg>
+            <span class="visit-card-button-label">כרטיס ביקור</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="column image-column">
+      <img [src]="'mini-workshop.jpg' | asset" loading="lazy" alt="" />
+    </div>
+  </div>
+</div>
+
+<app-contact-section
+  [postVcfContactPrefillMessage]="postVcfContactPrefillMessage"
+></app-contact-section>
+
+<div class="section green-section mini-workshop-full-site">
+  <div class="content-wrapper narrower">
+    <h2 class="handwriting centered-text margin-bottom">
+      נשמח לראות אתכם גם באתר המלא
+    </h2>
+    <div class="button-holder flex-centered">
+      <button class="secondary" type="button" routerLink="/">
+        המשיכו לאתר המלא
+      </button>
+    </div>
+  </div>
+</div>

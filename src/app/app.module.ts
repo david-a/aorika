@@ -17,12 +17,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GroupsPageComponent } from './components/groups-page/groups-page.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { AccessibilityPageComponent } from './components/accessibility-page/accessibility-page.component';
+import { ContactSectionComponent } from './components/contact-section/contact-section.component';
+import { MiniWorkshopLandingComponent } from './components/mini-workshop-landing/mini-workshop-landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomePageComponent,
+    ContactSectionComponent,
+    MiniWorkshopLandingComponent,
     ProductCardComponent,
     CatalogPageComponent,
     WorkshopCardComponent,

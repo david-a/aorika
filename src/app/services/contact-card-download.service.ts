@@ -51,7 +51,8 @@ export class ContactCardDownloadService {
   }
 
   private scrollHomeToContactSection(): void {
-    if (this.isAtHomePath()) {
+    // דף הבית, דף נחיתה עם טופס, וכו׳ — כל עוד יש `#contact` ב-DOM
+    if (document.getElementById('contact')) {
       this.scrollContactSectionIntoView();
       return;
     }
@@ -64,11 +65,6 @@ export class ContactCardDownloadService {
       }
       this.scrollContactAfterHomeNavigation();
     });
-  }
-
-  private isAtHomePath(): boolean {
-    const path = window.location.pathname.replace(/\/$/, '') || '/';
-    return path === '/';
   }
 
   private scrollContactSectionIntoView(): void {

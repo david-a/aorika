@@ -6,12 +6,17 @@ import { GalleryPageComponent } from './components/gallery-page/gallery-page.com
 import { GroupsPageComponent } from './components/groups-page/groups-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { MediaPageComponent } from './components/media-page/media-page.component';
+import { MiniWorkshopLandingComponent } from './components/mini-workshop-landing/mini-workshop-landing.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
     component: HomePageComponent,
+  },
+  {
+    path: 'mini-workshop',
+    component: MiniWorkshopLandingComponent,
   },
   { path: 'catalog', component: CatalogPageComponent },
   { path: 'gallery', component: GalleryPageComponent },

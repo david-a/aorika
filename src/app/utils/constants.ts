@@ -33,6 +33,10 @@ export const POST_VCF_CONTACT_SESSION_KEY = 'aorika_post_vcf_contact';
 export const POST_VCF_CONTACT_DEFAULT_MESSAGE =
   'היי אור! נעים להכיר... נשמח להיות בקשר.';
 
+/** הודעת ברירת מחדל לטופס אחרי הורדת vCard בדף הנחיתה של הסדנה בדוכן */
+export const POST_VCF_CONTACT_MINI_WORKSHOP_MESSAGE =
+  'היי אור! נפגשנו בדוכן, נעים להכיר... אשמח להיות בקשר.';
+
 export const CONTACT_VCF_HREF = '/assets/contacts/or-avikasis.vcf';
 
 export const CONTACT_VCF_DOWNLOAD_FILENAME = 'or-avikasis-aorika.vcf';

@@ -9,6 +9,7 @@ export const config: ScullyConfig = {
   outDir: './dist/scully',
   routes: {},
   extraRoutes: [
+    '/mini-workshop',
     ...Object.keys(PRODUCTS).map((productKey) => `/product/${productKey}`),
     ...Object.keys(WORKSHOPS).map((workshopKey) => `/workshop/${workshopKey}`),
   ],

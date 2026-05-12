@@ -1,0 +1,70 @@
+@use "variables" as v;
+
+.mini-workshop-landing-hero {
+  text-align: center;
+  padding-bottom: 8px;
+
+  @include v.xs-screen {
+    h2 {
+      font-size: 30px;
+    }
+
+    h4 {
+      font-size: 19px;
+    }
+  }
+}
+
+#mini-workshop-instructions {
+  .content-wrapper-columns {
+    align-items: stretch;
+  }
+
+  .column.image-column {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .column.image-column img {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include v.xs-screen {
+    .column.image-column {
+      display: block;
+    }
+
+    .column.image-column img {
+      flex: none;
+      min-height: 220px;
+      max-height: min(55vh, 420px);
+    }
+  }
+
+  .instruction-em {
+    font-weight: 600;
+    color: inherit;
+  }
+
+  .instructions-list {
+    margin: 0;
+    padding-inline-start: 1.35rem;
+
+    li {
+      margin-bottom: 0.45rem;
+
+      &::marker {
+        color: v.$or-green;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.mini-workshop-full-site {
+  padding-bottom: 56px;
+}
