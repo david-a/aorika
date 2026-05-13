@@ -6,22 +6,31 @@ import {
   POST_VCF_CONTACT_ACTIVATED_EVENT,
   POST_VCF_CONTACT_SESSION_KEY,
 } from '../utils/constants';
+import {
+  AnalyticsService,
+  ContactCardPlacement,
+} from './analytics.service';
 
 @Injectable({ providedIn: 'root' })
 export class ContactCardDownloadService {
   readonly vcfHref = CONTACT_VCF_HREF;
   readonly vcfDownloadFilename = CONTACT_VCF_DOWNLOAD_FILENAME;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private analytics: AnalyticsService
+  ) {}
 
   /** לינק `<a download>` — השאר את ההורדה לדפדפן */
-  onVcfAnchorClick(): void {
+  onVcfAnchorClick(placement: ContactCardPlacement): void {
+    this.analytics.contactCardSave(placement, 'anchor');
     this.persistPostVcfIntentAndNotify();
     this.scheduleScrollToContactSection();
   }
 
   /** `<button>` — הורדה פרוגרמטית + אותה זרימה */
-  triggerDownloadFromButton(): void {
+  triggerDownloadFromButton(placement: ContactCardPlacement): void {
+    this.analytics.contactCardSave(placement, 'button');
     this.persistPostVcfIntentAndNotify();
     this.scheduleScrollToContactSection();
     this.programmaticVcfDownload();

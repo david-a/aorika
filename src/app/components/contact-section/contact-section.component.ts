@@ -8,6 +8,8 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { Router } from '@angular/router';
+import { AnalyticsService } from 'src/app/services/analytics.service';
 import { environment } from 'src/environments/environment';
 import {
   CONTACT_FAILURE_MESSAGE,
@@ -40,7 +42,11 @@ export class ContactSectionComponent implements OnInit, AfterViewInit, OnDestroy
     });
   };
 
-  constructor(private ngZone: NgZone) {}
+  constructor(
+    private ngZone: NgZone,
+    private router: Router,
+    private analytics: AnalyticsService
+  ) {}
 
   ngOnInit(): void {
     try {
@@ -93,6 +99,10 @@ export class ContactSectionComponent implements OnInit, AfterViewInit, OnDestroy
       .then((response) => {
         if (response.ok) {
           this.submitMessage = CONTACT_SUCCESS_MESSAGE;
+          this.analytics.contactFormSubmitSuccess(
+            this.pagePathForAnalytics(),
+            this.postVcfContactUi
+          );
         } else {
           response.json().then((body) => {
             if (body.hasOwnProperty('errors')) {
@@ -108,5 +118,12 @@ export class ContactSectionComponent implements OnInit, AfterViewInit, OnDestroy
       .catch(() => {
         this.submitError = CONTACT_FAILURE_MESSAGE;
       });
+  }
+
+  /** GA path segment without query or hash */
+  private pagePathForAnalytics(): string {
+    const raw = this.router.url.split('?')[0];
+    const hashIdx = raw.indexOf('#');
+    return (hashIdx >= 0 ? raw.slice(0, hashIdx) : raw) || '/';
   }
 }
