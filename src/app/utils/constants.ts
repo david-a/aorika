@@ -30,6 +30,9 @@ export const POST_VCF_CONTACT_ACTIVATED_EVENT = 'aorika-post-vcf-contact';
 /** נקבע אחרי לחיצה על הורדת איש קשר; נשמר לכל המפגש בדפדפן */
 export const POST_VCF_CONTACT_SESSION_KEY = 'aorika_post_vcf_contact';
 
+/** נתוני כניסה ראשונה (UTM, referrer) לאנליטיקס — נשמר לכל המפגש בדפדפן */
+export const ANALYTICS_LANDING_ATTRIBUTION_SESSION_KEY = 'aorika_analytics_landing';
+
 export const POST_VCF_CONTACT_DEFAULT_MESSAGE =
   'היי אור! נעים להכיר... נשמח להיות בקשר.';
 

@@ -19,6 +19,9 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { AccessibilityPageComponent } from './components/accessibility-page/accessibility-page.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { MiniWorkshopLandingComponent } from './components/mini-workshop-landing/mini-workshop-landing.component';
+import { ANALYTICS_BACKENDS } from './services/analytics/analytics-backends.token';
+import { createAnalyticsBackends } from './services/analytics/analytics-backends.factory';
+import { MixpanelAnalyticsProvider } from './services/analytics/mixpanel-analytics.provider';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,14 @@ import { MiniWorkshopLandingComponent } from './components/mini-workshop-landing
     AccessibilityPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ScullyLibModule],
-  providers: [],
+  providers: [
+    MixpanelAnalyticsProvider,
+    {
+      provide: ANALYTICS_BACKENDS,
+      useFactory: createAnalyticsBackends,
+      deps: [MixpanelAnalyticsProvider],
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

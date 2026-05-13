@@ -6,6 +6,10 @@ export const environment = {
   production: false,
   baseUrl: 'http://localhost:4500/',
   contactFormTarget: 'https://formspree.io/f/mlezadba',
+  /** Set your Mixpanel project token; empty disables Mixpanel (no-op). */
+  mixpanelToken: '',
+  /** Optional. EU projects: `https://api-eu.mixpanel.com` */
+  mixpanelApiHost: 'https://api-eu.mixpanel.com', //undefined as string | undefined,
 };
 
 /*

@@ -6,10 +6,7 @@ import {
   POST_VCF_CONTACT_ACTIVATED_EVENT,
   POST_VCF_CONTACT_SESSION_KEY,
 } from '../utils/constants';
-import {
-  AnalyticsService,
-  ContactCardPlacement,
-} from './analytics.service';
+import { AnalyticsService, ContactCardPlacement } from './analytics/analytics.service';
 
 @Injectable({ providedIn: 'root' })
 export class ContactCardDownloadService {
@@ -23,14 +20,14 @@ export class ContactCardDownloadService {
 
   /** לינק `<a download>` — השאר את ההורדה לדפדפן */
   onVcfAnchorClick(placement: ContactCardPlacement): void {
-    this.analytics.contactCardSave(placement, 'anchor');
+    this.analytics.trackContactCardSaved(placement, 'anchor');
     this.persistPostVcfIntentAndNotify();
     this.scheduleScrollToContactSection();
   }
 
   /** `<button>` — הורדה פרוגרמטית + אותה זרימה */
   triggerDownloadFromButton(placement: ContactCardPlacement): void {
-    this.analytics.contactCardSave(placement, 'button');
+    this.analytics.trackContactCardSaved(placement, 'button');
     this.persistPostVcfIntentAndNotify();
     this.scheduleScrollToContactSection();
     this.programmaticVcfDownload();

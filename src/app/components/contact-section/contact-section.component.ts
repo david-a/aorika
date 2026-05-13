@@ -9,7 +9,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { AnalyticsService } from 'src/app/services/analytics.service';
+import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 import { environment } from 'src/environments/environment';
 import {
   CONTACT_FAILURE_MESSAGE,
@@ -99,7 +99,7 @@ export class ContactSectionComponent implements OnInit, AfterViewInit, OnDestroy
       .then((response) => {
         if (response.ok) {
           this.submitMessage = CONTACT_SUCCESS_MESSAGE;
-          this.analytics.contactFormSubmitSuccess(
+          this.analytics.trackContactFormSubmitted(
             this.pagePathForAnalytics(),
             this.postVcfContactUi
           );
@@ -120,7 +120,7 @@ export class ContactSectionComponent implements OnInit, AfterViewInit, OnDestroy
       });
   }
 
-  /** GA path segment without query or hash */
+  /** Path segment without query or hash */
   private pagePathForAnalytics(): string {
     const raw = this.router.url.split('?')[0];
     const hashIdx = raw.indexOf('#');

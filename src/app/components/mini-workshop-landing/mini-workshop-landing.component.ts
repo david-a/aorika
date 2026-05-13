@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { AnalyticsService } from 'src/app/services/analytics.service';
+import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 import { ContactCardDownloadService } from 'src/app/services/contact-card-download.service';
 import { POST_VCF_CONTACT_MINI_WORKSHOP_MESSAGE } from 'src/app/utils/constants';
 import { environment } from 'src/environments/environment';
@@ -21,7 +21,7 @@ export class MiniWorkshopLandingComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.analytics.miniWorkshopLandingView();
+    this.analytics.trackMiniWorkshopLandingViewed();
     const title = 'אאוריקה — סדנה בקטנה — מגנט עץ';
     this.titleService.setTitle(title);
     this.metaService.updateTag({
