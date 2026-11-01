@@ -443,8 +443,8 @@
     "name": "לִימוֹנִית",
     "dimensions": "רוחב: 29 ס״מ | עומק: 9 ס״מ | גובה: 16 ס״מ",
     "description": "מיני אדנית מוגבהת.",
-    "coverImage": "limonit-2.png",
-    "media": ["limonit-2.png"],
+    "coverImage": "limonit-2-card.png",
+    "media": ["limonit-2.png", "limonit.png"],
     "tags": {
       "catalog": false,
       "homepage": false,
