@@ -450,5 +450,31 @@
       "homepage": false,
       "groups": true
     }
+  },
+  "mem": {
+    "name": "מֶלִיסָה",
+    "description": "משחק אתגרי גפרורים.",
+    "coverImage": "melisa.jpg",
+    "media": [
+      "melisa.jpg"
+    ],
+    "tags": {
+      "catalog": false,
+      "homepage": false,
+      "groups": true
+    }
+  },
+  "nun": {
+    "name": "נַרְקִיס",
+    "description": "מגש הגשה עם ידיות.",
+    "coverImage": "narkis.png",
+    "media": [
+      "narkis.png"
+    ],
+    "tags": {
+      "catalog": false,
+      "homepage": false,
+      "groups": true
+    }
   }
 }
