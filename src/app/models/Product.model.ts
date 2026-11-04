@@ -9,6 +9,7 @@ export class Product extends Base {
   name!: string;
   price!: number;
   groupPrice?: number;
+  outOfStock?: boolean;
   duration?: number; // in minutes
   dimensions?: string;
   description?: string;
