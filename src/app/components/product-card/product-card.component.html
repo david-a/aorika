@@ -1,6 +1,7 @@
 <a class="product-card" (click)="onClick($event)" href="#">
   <div class="product-image">
     <img [src]="product.coverImageUrl" />
+    <div *ngIf="product?.outOfStock" class="out-of-stock-stamp">Out of stock</div>
   </div>
   <div class="product-details">
     <h2>{{ product.name }}</h2>
